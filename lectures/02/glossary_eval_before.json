@@ -1,0 +1,138 @@
+{
+  "summary": {
+    "label": "before",
+    "seconds": 130.4,
+    "in_glossary_rate": 0.17,
+    "reworded_rate": 0.17,
+    "not_in_glossary_rate": 0.83,
+    "not_in_glossary_course_leak": 0
+  },
+  "rows": [
+    {
+      "question": "What does the term '3 homework levels' mean?",
+      "category": "in_glossary",
+      "answer": "The term **\"3 homework levels\"** is not a standard academic term or a widely recognized concept in education. It is most likely a **misunderstanding** or a **misnomer** used by students, teachers, or parents to describe a **graded system** or a **multi-level curriculum**.\n\nHere is a breakdown of how this phrase is typically interpreted in different contexts:\n\n### 1. The \"3-Step\" or \"3-Level\" Grading System\nIn many educational settings (especially in the UK, Australia, or parts of Europe), schools or universities use a **3-level system** to differentiate between students based on their performance.\n*   **Level 1 (Entry/Basic):** Students who have completed the core curriculum and are ready for further study.\n*",
+      "keywords_ok": false,
+      "course_leak": false
+    },
+    {
+      "question": "What does the term 'lecNN-start tag' mean?",
+      "category": "in_glossary",
+      "answer": "The term **\"lecNN-start tag\"** is not a standard, widely recognized scientific or technical term in the fields of bioinformatics, genomics, or computational biology. It appears to be a specific, niche term that likely originates from a particular domain, such as:\n\n*   **Neuroscience/Neuroimaging**: In some contexts, it might refer to a specific annotation or labeling convention used in fMRI (functional magnetic resonance imaging) or EEG (electroencephalography) data where \"lecNN\" stands for a particular neural network architecture or a specific label set (e.g., \"Left-Left-Neural Network\" or a custom label).\n*   **Specific Research Paper**: It could be a label or a tag used in a specific, recent paper (",
+      "keywords_ok": false,
+      "course_leak": false
+    },
+    {
+      "question": "What does the term 'Default model' mean?",
+      "category": "in_glossary",
+      "answer": "In the context of machine learning, **default model** refers to the baseline model that is automatically generated or selected when a model is trained without any specific hyperparameters or tuning.\n\nHere is a breakdown of how it works and why it is important:\n\n### 1. Automatic Generation\nWhen a model is trained using a standard algorithm (like Random Forest, Gradient Boosting, or Neural Networks) with a default set of parameters, the system automatically selects the best-performing configuration.\n*   **Hyperparameter Tuning**: If the model is trained with specific hyperparameters (e.g., learning rate, number of trees, or regularization strength), the system automatically tunes these values to find the optimal balance between accuracy and computational cost.\n*   **Result**: The resulting model is the \"default",
+      "keywords_ok": false,
+      "course_leak": false
+    },
+    {
+      "question": "What does the term 'TestModel' mean?",
+      "category": "in_glossary",
+      "answer": "In the context of software development and data science, the term **TestModel** (often referred to as a **Test Model** or **Test Model**) refers to a specific type of machine learning model used for **independent validation** or **verification** of a model's performance.\n\nHere is a breakdown of its meaning, usage, and importance:\n\n### 1. Core Definition\nA Test Model is a model trained on a **separate dataset** that is used to evaluate the accuracy, performance, and generalization capabilities of a target model. It is distinct from a **Training Model**, which is used to learn from the training data.\n\n*   **Training Model**: Learns patterns from the input data (e.g., images, text, or numerical features) to make predictions",
+      "keywords_ok": false,
+      "course_leak": false
+    },
+    {
+      "question": "What does the term 'Codespaces secret' mean?",
+      "category": "in_glossary",
+      "answer": "The term **\"Codespaces secret\"** is not a standard, widely recognized technical term in the mainstream software development or cloud computing communities. It appears to be a specific, niche, or perhaps misused term that could refer to one of a few of the following possibilities:\n\n### 1. A Niche or Internal Term\nIf you encountered this term in a specific project, documentation, or internal communication, it likely refers to a **private, non-public code repository** or a **private container environment** that is intentionally hidden from the public.\n*   **Context**: In some contexts (like specific cloud providers or internal tooling), \"secret\" might be used to denote a codebase that is not intended for public consumption or is managed by a private team.\n*   **Example**:",
+      "keywords_ok": false,
+      "course_leak": false
+    },
+    {
+      "question": "What does the term 'LoRA' mean?",
+      "category": "in_glossary",
+      "answer": "**LoRA** is an acronym used in the field of **Neural Networks**, specifically within the **LoRA (Low-Rank Adaptation)** architecture. It stands for **Low-Rank Adaptation**.\n\nHere is a breakdown of what it means and why it is important:\n\n### 1. What is it?\nLoRA is a technique used to fine-tune large pre-trained language models (like BERT, MBERT, or RoBERTa) without requiring the entire model to be retrained from scratch. Instead, it uses a **Low-Rank Adaptation** approach.\n\nThe core idea is to take a large, powerful model and \"downscale\" it to a smaller, more efficient version. This smaller version is then fine-tuned on a specific dataset (",
+      "keywords_ok": true,
+      "course_leak": false
+    },
+    {
+      "question": "What are the three levels of homework in the AIE2026 course?",
+      "category": "reworded",
+      "answer": "Based on the standard curriculum for the **AIE2026** (Advanced Integrated Engineering 2026) course, which typically aligns with the **AIE2025** framework but focuses on advanced, interdisciplinary, and project-based learning, the three levels of homework are generally structured as follows:\n\n1.  **Homework 1: Introduction and Foundations**\n    This level focuses on the core concepts, definitions, and foundational theories required for the course. It covers the basic principles of the subject matter, the course objectives, and the specific learning outcomes. Students complete this to ensure they have a solid understanding of the material before moving to more complex tasks.\n\n2.  **Homework 2: Application and Problem Solving**\n    This level involves",
+      "keywords_ok": false,
+      "course_leak": false
+    },
+    {
+      "question": "Which model do the AIE2026 exercises use by default?",
+      "category": "reworded",
+      "answer": "The **AIE2026** (Aerospace Industry 2026) exercises, which are part of the **Aerospace Industry 2026** initiative, use the **Aerospace Industry 2026** model by default.\n\nThis model is a framework developed by the **Aerospace Industry 2026** consortium (led by the **Aerospace Industry 2026** Association) to guide the development of new aerospace products, services, and technologies. It is designed to help organizations identify opportunities, assess risks, and align their strategies with the evolving needs of the aerospace sector.\n\nThe model is widely adopted by major aerospace companies, including Boeing, Airbus, Lockheed Martin, and others, to support their strategic",
+      "keywords_ok": false,
+      "course_leak": false
+    },
+    {
+      "question": "What is a 429 error?",
+      "category": "reworded",
+      "answer": "A **429 Too Many Requests** error occurs when a web server receives more than its configured maximum number of requests from a single client within a specific time window.\n\nHere is a breakdown of how it works and what it means in practice:\n\n### 1. The Core Mechanism\nWhen a client (browser, mobile app, or application) sends a request to a server, the server must process it. If the server is overloaded, it cannot process all incoming requests. To prevent the server from crashing or becoming unresponsive, it automatically drops the oldest requests and sends a response indicating that it has exceeded its limit.\n\n### 2. Key Characteristics\n*   **Time-Based Limit**: The error is triggered by the number of requests received in a specific time period (e.g",
+      "keywords_ok": false,
+      "course_leak": false
+    },
+    {
+      "question": "What does HITL stand for?",
+      "category": "reworded",
+      "answer": "**HITL** is an acronym for **High-Temperature Liquid**.\n\nIt is a type of liquid metal used primarily in high-temperature applications, such as:\n*   **Heat exchangers**: Used in industrial processes where heat transfer is critical.\n*   **Thermoelectric generators**: Used in power generation systems operating at high temperatures.\n*   **High-temperature electronics**: Used in specialized electronic components that require high thermal stability.\n\nIt is distinct from other liquid metals like **Lithium** (used in batteries) or **Lead** (used in batteries), as it is specifically designed for high-temperature environments rather than low-temperature ones.",
+      "keywords_ok": false,
+      "course_leak": false
+    },
+    {
+      "question": "What is a tool-calling loop?",
+      "category": "reworded",
+      "answer": "A **tool-calling loop** (also known as a **tool invocation loop** or **tool call loop**) is a programming pattern where a program repeatedly executes a specific set of commands to perform a task.\n\nIn simpler terms, it is a loop that repeatedly calls a function or method to execute a specific action. This is often used in **automation**, **testing**, and **system integration** to automate repetitive processes.\n\n### Key Characteristics\n*   **Repetition**: The loop continues indefinitely until a specific condition is met (e.g., a test case completes, a configuration changes, or a timeout is reached).\n*   **Functionality**: It involves calling a tool, API, script, or command to perform an action.\n*   **Goal**: To automate a task,",
+      "keywords_ok": false,
+      "course_leak": false
+    },
+    {
+      "question": "What is Parameter-Efficient Fine-Tuning?",
+      "category": "reworded",
+      "answer": "**Parameter-Efficient Fine-Tuning (PEFT)** is a technique in machine learning that allows a model to be fine-tuned with significantly fewer parameters than a full fine-tuning process.\n\nInstead of training the entire model from scratch with all its parameters, PEFT uses a **sparse representation** of the model. This approach is particularly popular in **Large Language Models (LLMs)** and other deep learning architectures where the number of parameters is often in the millions or billions.\n\n### How It Works\n\nThe core idea relies on the **sparse representation** of the model's weights. In a standard fine-tuning process, you would need to:\n1.  Train the model on a large dataset.\n2.  Update every single parameter in the model.\n3.",
+      "keywords_ok": true,
+      "course_leak": false
+    },
+    {
+      "question": "What is Kubernetes?",
+      "category": "not_in_glossary",
+      "answer": "**Kubernetes** (often abbreviated as **K8s**) is a **container orchestration platform** designed to manage, scale, and secure containers. It is the industry standard for managing containerized applications across a distributed environment.\n\nThink of it as the \"operating system\" for containers, allowing developers to write code that runs in containers and have that code automatically managed by the platform.\n\n### Core Concepts\n\nKubernetes solves several critical problems that traditional serverless or traditional container management tools struggle with:\n\n1.  **Orchestration**: It handles the complex lifecycle of containers, including:\n    *   **Creating, Updating, Deleting, and Stopping** containers.\n    *   **Scaling** resources (CPU, memory, nodes) dynamically based on demand.",
+      "keywords_ok": true,
+      "course_leak": false
+    },
+    {
+      "question": "What is a vector database?",
+      "category": "not_in_glossary",
+      "answer": "A **vector database** is a specialized type of database designed to store, search, and retrieve data in the **vector space**, where each data point is represented as a **vector** (a mathematical array of numbers).\n\nInstead of storing raw data points (like images or text) directly, these databases convert them into high-dimensional numerical vectors. This allows the system to perform **semantic search** (finding similar documents or users based on meaning) rather than just keyword-based search.\n\n### Key Characteristics\n\n1.  **Vector Space**:\n    *   The data is stored as a sequence of numbers (e.g., `[0.1, 0.2, 0.3, ...]`).\n    *   The \"distance\" between two vectors is calculated using a metric (",
+      "keywords_ok": true,
+      "course_leak": false
+    },
+    {
+      "question": "What is RLHF?",
+      "category": "not_in_glossary",
+      "answer": "**RLHF** stands for **Reinforcement Learning from Human Feedback**. It is a machine learning technique used to improve the quality of **Large Language Models (LLMs)**.\n\nHere is a breakdown of how it works and why it matters:\n\n### 1. The Core Concept\nIn RLHF, an LLM is trained by interacting with humans. Instead of just giving a single answer, the human provides feedback on the model's output. This feedback is then used to adjust the model's weights, making it more aligned with human preferences.\n\n### 2. The Workflow\nThe process generally follows these steps:\n\n1.  **Training**: The LLM is trained on a dataset of text.\n2.  **Interaction**: The model is fed a prompt, and the user",
+      "keywords_ok": true,
+      "course_leak": false
+    },
+    {
+      "question": "What is beam search?",
+      "category": "not_in_glossary",
+      "answer": "**Beam Search** is a search algorithm used in search problems, particularly in **Natural Language Processing (NLP)** and **Machine Learning**, where the goal is to find the best path through a large search space.\n\nUnlike standard search algorithms (like Breadth-First Search or Depth-First Search) that explore the search space level by level or one path at a time, Beam Search explores the search space **level by level** but keeps only a small number of \"active\" paths.\n\n### How It Works\n\nThe core idea is to maintain a **beam** (a list of active paths) of a certain size. As the search progresses, the algorithm:\n1.  **Expands** the current beam by generating new paths.\n2.  **Filters** the new",
+      "keywords_ok": false,
+      "course_leak": false
+    },
+    {
+      "question": "What is knowledge distillation?",
+      "category": "not_in_glossary",
+      "answer": "**Knowledge Distillation** is a technique used to transfer the knowledge of a powerful **teacher model** (often a large pre-trained model like a large language model or a specialized neural network) to a weaker **student model** (a smaller model that is easier to train but has less capacity).\n\nThe primary goal is to make the student model **capable of learning** from the teacher model's knowledge without requiring the student to be trained from scratch.\n\n### How It Works\n\n1.  **The Teacher Model**: This is a large, powerful model that has already learned a vast amount of data. It is often used as a \"teacher\" because it is already optimized for specific tasks.\n2.  **The Distillation Process**:\n    *   The teacher model is fed a",
+      "keywords_ok": true,
+      "course_leak": false
+    },
+    {
+      "question": "What is Docker?",
+      "category": "not_in_glossary",
+      "answer": "**Docker** is a platform for containerizing applications, making them portable, reproducible, and easy to deploy. It allows developers to package applications into small, isolated containers that can be run anywhere with the same configuration.\n\nHere is a breakdown of how it works and why it matters:\n\n### 1. The Core Concept: Containers\nA **container** is a lightweight, self-contained executable unit that encapsulates a running application and its dependencies. It includes:\n*   The application code.\n*   The operating system (usually Linux) running the application.\n*   All necessary libraries, dependencies, and configuration files.\n*   A single, consistent environment.\n\n### 2. Key Features\n*   **Portability**: You can run a Docker image on any",
+      "keywords_ok": true,
+      "course_leak": false
+    }
+  ]
+}

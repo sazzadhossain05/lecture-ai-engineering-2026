@@ -1,0 +1,138 @@
+{
+  "summary": {
+    "label": "after",
+    "seconds": 63.2,
+    "in_glossary_rate": 1.0,
+    "reworded_rate": 0.5,
+    "not_in_glossary_rate": 0.33,
+    "not_in_glossary_course_leak": 3
+  },
+  "rows": [
+    {
+      "question": "What does the term '3 homework levels' mean?",
+      "category": "in_glossary",
+      "answer": "A structure for organizing homework in one page. There are three levels: \"Basic (review lecture content)\", \"Implementation (write your own code)\", and \"Advanced (research and experimentation)\". Completing any one level completes the homework for that lecture.",
+      "keywords_ok": true,
+      "course_leak": false
+    },
+    {
+      "question": "What does the term 'lecNN-start tag' mean?",
+      "category": "in_glossary",
+      "answer": "A Git tag on the starting code for each lecture's exercises in the AIE2026 course repository (for example, lec03-start). Even if you have not finished the previous lecture, creating a branch from this tag lets you start the current lecture's exercises.",
+      "keywords_ok": true,
+      "course_leak": false
+    },
+    {
+      "question": "What does the term 'Default model' mean?",
+      "category": "in_glossary",
+      "answer": "The standard model for AIE2026 exercises and homework is gemini-3.5-flash-lite, chosen with free-tier rate limits and stable course operation in mind. You may switch models with the AIE_MODEL environment variable or use your own API subscription.",
+      "keywords_ok": true,
+      "course_leak": false
+    },
+    {
+      "question": "What does the term 'TestModel' mean?",
+      "category": "in_glossary",
+      "answer": "A fake model included in Pydantic AI for testing. It calls tools and returns dummy answers without calling a real LLM. It lets you test agent wiring (whether tools are registered, called, and return results) without an API key or usage allowance.",
+      "keywords_ok": true,
+      "course_leak": false
+    },
+    {
+      "question": "What does the term 'Codespaces secret' mean?",
+      "category": "in_glossary",
+      "answer": "A secret value registered in your GitHub account settings. It is passed as an environment variable when you start Codespaces for a selected repository. When registering it, select the repository you will use (your own fork). If registered while a Codespace is running, restart the Codespace.",
+      "keywords_ok": true,
+      "course_leak": false
+    },
+    {
+      "question": "What does the term 'LoRA' mean?",
+      "category": "in_glossary",
+      "answer": "A PEFT method that freezes pretrained weights, represents weight updates as a low-rank product of two small matrices, and trains only those small matrices. It trains few parameters and saves the results (adapters) in small files. The Lecture 02 exercises cover LoRA.",
+      "keywords_ok": true,
+      "course_leak": false
+    },
+    {
+      "question": "What are the three levels of homework in the AIE2026 course?",
+      "category": "reworded",
+      "answer": "The course structure defines homework as part of class time. It is done in three levels:\n\n- **Essential (due in class)**: Required work that cannot be skipped. It covers lecture content and exercises in the course syllabus.\n- **Optional (due at home)**: Useful work that supports learning beyond class time. It may cover research, projects, or applications.\n- **Extra (due outside class)**: Advanced work not supported by class time. It may require external tools, data, or resources.",
+      "keywords_ok": false,
+      "course_leak": false
+    },
+    {
+      "question": "Which model do the AIE2026 exercises use by default?",
+      "category": "reworded",
+      "answer": "The standard LLM (Gemini 3.5 Flashlight or Claude 3.5 Sonnet) depending on your account. With this course, it is Standard (LLM). When you have used tools successfully, switch models to Agent (Claude Truist or Pi) by adding \"Agent\" to the model setting in /app/worksheets/ai/ai-lecture02/lecture2.md.",
+      "keywords_ok": false,
+      "course_leak": false
+    },
+    {
+      "question": "What is a 429 error?",
+      "category": "reworded",
+      "answer": "An error returned by an API when a user exceeds their rate limit. The server refuses requests until they have used the service less recently. This course uses it to teach sending requests to multiple URLs from the same machine.",
+      "keywords_ok": true,
+      "course_leak": false
+    },
+    {
+      "question": "What does HITL stand for?",
+      "category": "reworded",
+      "answer": "Human-in-the-loop: requiring human confirmation before important operations, such as program changes or data processing. This is useful before AI generates or stores output.",
+      "keywords_ok": true,
+      "course_leak": false
+    },
+    {
+      "question": "What is a tool-calling loop?",
+      "category": "reworded",
+      "answer": "The process of calling tools through a program (agent) is one loop; processing the output of the previous loop is the next. In Pydantic AI, tools defined in .aiconfig become loops, and multiple agents can run in the same process.",
+      "keywords_ok": false,
+      "course_leak": false
+    },
+    {
+      "question": "What is Parameter-Efficient Fine-Tuning?",
+      "category": "reworded",
+      "answer": "A method of further training a model using only a small set of initialization values (parameters) rather than all available parameters. This is suitable when there are not enough examples or data for full fine-tuning. In Pydantic AI, the adapter.py file contains code for this.",
+      "keywords_ok": true,
+      "course_leak": false
+    },
+    {
+      "question": "What is Kubernetes?",
+      "category": "not_in_glossary",
+      "answer": "A platform for managing multiple IDs of identical workloads. It supports running the same application as a multitenant system. In this course, we use it to separate agent workloads for each course.",
+      "keywords_ok": false,
+      "course_leak": true
+    },
+    {
+      "question": "What is a vector database?",
+      "category": "not_in_glossary",
+      "answer": "A system that stores a large set of vectors (representing vectors in feature space) separately from models (in memory or on a separate server). Used for search (searching in feature space, not tokens) and dimensionality reduction. In Pydantic AI, vectors are stored in a Pydantic Database and retrieved through Agent tool arguments.",
+      "keywords_ok": true,
+      "course_leak": false
+    },
+    {
+      "question": "What is RLHF?",
+      "category": "not_in_glossary",
+      "answer": "A suite of methods for guiding agent behavior through human evaluation. In this course, we use Pefted Teacher model to further train LoRA rings with multiple human reviews and scores.",
+      "keywords_ok": false,
+      "course_leak": true
+    },
+    {
+      "question": "What is beam search?",
+      "category": "not_in_glossary",
+      "answer": "A method of searching the space of all possible next tokens by exploring a tree of sentences of varying lengths, rather than one fixed length. It is suitable for generating text with few instructions or when the correct answer is not known in advance. In Pydantic AI, tools.stream_of_texts (Tools.stream_of_texts) does the same.",
+      "keywords_ok": false,
+      "course_leak": false
+    },
+    {
+      "question": "What is knowledge distillation?",
+      "category": "not_in_glossary",
+      "answer": "A method of teaching pretrained model weights to a smaller generator. The larger model passes inputs to the smaller one through a dummy loop, extracting similar outputs without exposing secrets or privileged operations. In this course, we do this with distill-pipe by joining the lecture homework (large model) and homework 02 (small model) into one agent.",
+      "keywords_ok": false,
+      "course_leak": true
+    },
+    {
+      "question": "What is Docker?",
+      "category": "not_in_glossary",
+      "answer": "A virtualization platform that packages a developer environment (including code, tools, and extensions) into a small container. All processes and files within a container are relative to the container's ID, making inter-container communication simple.",
+      "keywords_ok": true,
+      "course_leak": false
+    }
+  ]
+}
