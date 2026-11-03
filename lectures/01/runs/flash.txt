@@ -1,0 +1,75 @@
+[model] gemini-3.8-flash
+[question] What are the 3 homework levels in the AIE2026 course?
+
+The model is busy (503). Wait a little and try again.
+-----
+[model] gemini-3.8-flash
+[question] What are the 3 homework levels in the AIE2026 course?
+
+[tokens] input: 18 / output: 396
+In the **AI Engineering (AIE)** curriculum (such as the AI Makerspace AI Engineering bootcamp), homework assignments are typically structured across three progressive levels:
+
+---
+
+### **1. Level 1: Baseline (Core / Minimum Viable Product)**
+* **Objective:** Implement and verify the core concepts covered in the module.
+* **Requirements:** 
+  * Complete the provided starter notebook or template.
+  * Fill in the missing code blocks to achieve working end-to-end functionality.
+  * Successfully run the baseline pipeline (e.g., basic RAG pipeline, fine-tuning run, or evaluation) as instructed.
+
+---
+
+### **2. Level 2: Advanced (Experimentation & Optimization)**
+* **Objective:** Go beyond default configurations to evaluate, iterate, and improve performance.
+* **Requirements:**
+  * Experiment with alternative components (e.g., different embedding models, retrieval/chunking strategies, LLMs, or prompt engineering techniques).
+  * Implement quantitative or qualitative evaluation metrics (e.g., using Ragas, TruLens, or custom evals).
+  * Document observations, performance trade-offs, and insights comparing the baseline to your improvements.
+
+---
+
+### **3. Level 3: Production (Deployment & Public Artifact)**
+* **Objective:** Package the work into a real-world, production-ready deliverable.
+* **Requirements:**
+  * Build and deploy a user interface or API (e.g., using **Chainlit**, **Streamlit**, or **FastAPI**).
+  * Containerize the app (e.g., Docker) or deploy it live (e.g., Hugging Face Spaces, AWS, GCP).
+  * Produce a public-facing artifact, such as a **walkthrough video (Loom)** or a **technical blog post/write-up** documenting the architecture, challenges, and results.
+-----
+[model] gemini-3.8-flash
+[question] What are the 3 homework levels in the AIE2026 course?
+
+The model is busy (503). Wait a little and try again.
+-----
+[model] gemini-3.8-flash
+[question] What are the 3 homework levels in the AIE2026 course?
+
+The model is busy (503). Wait a little and try again.
+-----
+[model] gemini-3.8-flash
+[question] What are the 3 homework levels in the AIE2026 course?
+
+The model is busy (503). Wait a little and try again.
+-----
+[model] gemini-3.8-flash
+[question] What are the 3 homework levels in the AIE2026 course?
+
+[tokens] input: 18 / output: 360
+In the **AI Engineering Bootcamp (AIE)** (such as the flagship program by AI Makerspace), assignments are structured into a 3-tiered system designed to accommodate different experience levels and time commitments:
+
+1. **Level 1: Baseline / Core (MVP)**
+   * **Goal:** Understand and verify foundational concepts.
+   * **What it entails:** Completing the primary notebook or assignment as guided during the lecture/walkthrough. You fill in the designated code blocks, run the baseline models/pipelines, and demonstrate that the minimum viable solution works.
+
+2. **Level 2: Stretch / Challenge**
+   * **Goal:** Apply concepts independently and experiment.
+   * **What it entails:** Going beyond the baseline implementation. This often includes using custom datasets, testing alternative models/prompts/retrieval strategies, adding evaluations (e.g., RAGAS, custom metrics), or wrapping the solution in a frontend (like Chainlit or Gradio).
+
+3. **Level 3: Hardcore / Production (Ship It)**
+   * **Goal:** Build real-world, production-grade applications and share your work publicly.
+   * **What it entails:** Deploying the application live (e.g., to Hugging Face Spaces, AWS, or GCP), implementing advanced end-to-end workflows (such as custom agentic architectures or advanced observability/tracing), and writing a public artifact (a GitHub repository with thorough documentation, a technical blog post, or a video walkthrough).
+
+---
+
+*(Note: If your course is a specific university syllabus coded **AIE2026**, please specify the institution, as the terminology may vary between Standard/Core, Advanced/Extension, and Project-based tiers.)*
+-----

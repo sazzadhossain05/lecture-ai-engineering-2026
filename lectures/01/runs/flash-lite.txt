@@ -1,0 +1,22 @@
+[model] gemini-3.5-flash-lite
+[question] What are the 3 homework levels in the AIE2026 course?
+
+[tokens] input: 18 / output: 74
+I do not have access to real-time information, specific course syllabi, or internal details regarding the "AIE2026 course," as it is not part of my standard training data. 
+
+Could you provide more context, or paste the relevant text from your course syllabus? That way, I can help you find or summarize the information you need!
+-----
+[model] gemini-3.5-flash-lite
+[question] What are the 3 homework levels in the AIE2026 course?
+
+[tokens] input: 18 / output: 50
+I do not have access to specific information about the "AIE2026 course" or its curriculum, including the 3 homework levels. Could you please provide more context or specify which institution, platform, or program this course belongs to?
+-----
+[model] gemini-3.5-flash-lite
+[question] What are the 3 homework levels in the AIE2026 course?
+
+[tokens] input: 18 / output: 81
+I do not have access to specific information about the "AIE2026 course" or its homework levels, as this appears to be a proprietary, unreleased, or very specific internal course outside of my training data. 
+
+If you are a student taking this course, you can likely find this information in your course syllabus, welcome guide, or learning management system (LMS) portal.
+-----
