@@ -1,0 +1,50 @@
+### What are the 3 homework levels in the AIE2026 course?
+[model] gemini-3.5-flash-lite
+The three homework levels in the AIE2026 course are:
+
+1. **Basic**: Review the lecture content.
+2. **Implementation**: Write your own code.
+3. **Advanced**: Research and experimentation.
+
+As a reminder, you only need to complete any **one** of these levels to finish the homework for a given lecture, and the homework is not graded! 
+
+*(Lecture 01)*
+
+--- trace ---
+[tool call]   search_glossary({'query': 'homework'})
+[tool return] search_glossary -> [{"term": "3 homework levels", "lecture": 1, "definition": "The structure of AIE2026 homework. There are three levels: \…
+[usage] RunUsage(cost=Decimal('0.0006009'), details={'text_prompt_tokens': 1128}, input_text_tokens=1128, input_tokens=1128, output_tokens=105, requests=2, tool_calls=1)
+
+### What is the difference between LoRA and QLoRA?
+[model] gemini-3.5-flash-lite
+To understand the difference between **LoRA** and **QLoRA**, let's break down how each approach handles the base model weights:
+
+* **LoRA (Low-Rank Adaptation):** This method freezes the pretrained model weights and represents weight updates using a low-rank product of two small matrices, training only those small matrices. While this drastically reduces the number of trainable parameters, the base model weights are typically kept in their standard precision (such as 16-bit) in memory during training.
+* **QLoRA (Quantized LoRA):** This builds upon LoRA by introducing **quantization**—such as compressing the base model weights down to 4-bit precision. By doing this, QLoRA significantly reduces the memory footprint of the base model, allowing much larger models to be fine-tuned on smaller, resource-constrained GPUs.
+
+Think about how the precision of the base model weights impacts your GPU memory usage during training. How might loading a model in 4-bit versus 16-bit change what kind of hardware you need for your experiments?
+
+Lecture 02
+
+--- trace ---
+[tool call]   search_glossary({'query': 'LoRA'})
+[tool call]   search_glossary({'query': 'QLoRA'})
+[tool return] search_glossary -> [{"term": "LoRA", "lecture": 2, "definition": "A PEFT method that freezes pretrained weights, represents weight updates …
+[tool return] search_glossary -> [{"term": "QLoRA", "lecture": 2, "definition": "A method that saves memory by quantizing base-model weights to, for exam…
+[usage] RunUsage(cost=Decimal('0.0010679'), details={'text_prompt_tokens': 1343}, input_text_tokens=1343, input_tokens=1343, output_tokens=266, requests=2, tool_calls=2)
+
+### Give me one review question from Lecture 02
+[model] gemini-3.5-flash-lite
+Here is a review question from Lecture 02:
+
+**What does Learning rate mean?**
+
+Give it your best shot! (Take a moment to think about how it affects the parameter updates during model training.)
+
+(Lecture 02)
+
+--- trace ---
+[tool call]   make_quiz({'lecture': 2})
+[tool return] make_quiz -> {"question": "What does Learning rate mean?", "answer": "A hyperparameter that determines how far parameters move in one…
+[usage] RunUsage(cost=Decimal('0.0004310'), details={'text_prompt_tokens': 895}, input_text_tokens=895, input_tokens=895, output_tokens=65, requests=2, tool_calls=1)
+

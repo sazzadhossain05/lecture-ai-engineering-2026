@@ -1,0 +1,53 @@
+### What are the 3 homework levels in the AIE2026 course?
+Downloading google-adk (5.1MiB)
+ Downloaded google-adk
+Installed 48 packages in 1.10s
+[model] gemini-3.5-flash-lite
+In the AIE2026 course, the three homework levels are:
+
+1. **Basic**: Reviewing the lecture content.
+2. **Implementation**: Writing your own code.
+3. **Advanced**: Research and experimentation.
+
+Remember, you only need to complete any **one** of these levels to finish the homework for that lecture, and as a general rule, the homework is not graded. Try thinking about which level best fits your current goals and schedule for this week!
+
+(Lecture 01)
+
+--- trace ---
+[tool call]   search_glossary({'query': 'homework levels'})
+[tool return] search_glossary -> {'result': '[{"term": "3 homework levels", "lecture": 1, "definition": "The structure of AIE2026 homework. There are thr…
+[usage] {'model_calls': 2, 'input_tokens': 1083, 'output_tokens': 125}
+
+### What is the difference between LoRA and QLoRA?
+[model] gemini-3.5-flash-lite
+Based on the course glossary:
+
+* **LoRA (Low-Rank Adaptation):** A Parameter-Efficient Fine-Tuning (PEFT) method that freezes the pretrained model weights and represents weight updates using a low-rank product of two small matrices. Only these small matrices are trained, which drastically reduces the number of trainable parameters and produces small adapter files.
+* **QLoRA (Quantized LoRA):** Builds upon LoRA by quantizing the base-model weights (for example, down to 4 bits) to significantly save memory. This allows you to train larger models on smaller GPUs.
+
+To think about how they work together: LoRA focuses on *how* we represent and train the weight updates efficiently, whereas QLoRA adds *quantization* to the base weights beforehand to drastically lower the memory footprint during training.
+
+(Lecture 02)
+
+--- trace ---
+[tool call]   search_glossary({'query': 'LoRA'})
+[tool call]   search_glossary({'query': 'QLoRA'})
+[tool return] search_glossary -> {'result': '[{"term": "LoRA", "lecture": 2, "definition": "A PEFT method that freezes pretrained weights, represents wei…
+[tool return] search_glossary -> {'result': '[{"term": "QLoRA", "lecture": 2, "definition": "A method that saves memory by quantizing base-model weights …
+[usage] {'model_calls': 2, 'input_tokens': 1467, 'output_tokens': 216}
+
+### Give me one review question from Lecture 02
+[model] gemini-3.5-flash-lite
+Here is a review question from Lecture 02:
+
+**What does LoRA mean?**
+
+Give it a try! If you'd like a hint on how to think about this term, just let me know. 
+
+Lecture 02
+
+--- trace ---
+[tool call]   make_quiz({'lecture': 2})
+[tool return] make_quiz -> {'result': '{"question": "What does LoRA mean?", "answer": "A PEFT method that freezes pretrained weights, represents we…
+[usage] {'model_calls': 2, 'input_tokens': 1048, 'output_tokens': 67}
+
