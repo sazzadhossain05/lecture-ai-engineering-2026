@@ -1,0 +1,22 @@
+Tools visible to the model: 3
+
+[search_glossary]
+  Search the course glossary and return definitions and the sessions that cover the terms.
+  
+  Use before answering about AI engineering terms or words specific to this course (AIE2026).
+  Put only one term to look up in query (for example, "LoRA").
+  Arguments: {"query": {"type": "string"}}
+
+[get_lecture_summary]
+  Return key points from the specified session (an integer starting at 1).
+  
+  Use when asked about session content or relationships, such as "What will we learn in Lecture 03?".
+  Arguments: {"lecture": {"type": "integer"}}
+
+[make_quiz]
+  Create one review question from the glossary terms of the specified session (an integer starting at 1).
+  
+  Use when the learner asks for a review question or quiz about a session,
+  such as "Give me one review question from Lecture 02". Pose the returned question to the learner
+  and keep the answer hidden until the learner has tried to answer.
+  Arguments: {"lecture": {"type": "integer"}}
