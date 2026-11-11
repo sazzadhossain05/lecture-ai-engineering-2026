@@ -1,0 +1,24 @@
+[model] gemini-3.5-flash-lite  temperature=0  rubric=data/eval/rubric.md
+Grading 10 cases ....
+  [retry] error 503; waiting 10 seconds (attempt 1 of 6)
+.....
+  [retry] error 503; waiting 10 seconds (attempt 1 of 6)
+
+  [retry] error 503; waiting 20 seconds (attempt 2 of 6)
+.
+
+Agreement by criterion (your labels versus LLM judgments, 10 cases)
+  Grounding           9/9    Needs review: 1
+  Scope              10/10
+  Hint               10/10
+  Clarity             9/10
+  Lecture marker (code) 10/10
+Overall agreement   9/9   (Automatically judged 9/10 cases = coverage 90%)
+
+Needs review: 1 items (LLM marked unsure; human review needed)
+  #05 Grounding: The glossary does not contain RAG, and the answer correctly states this while giving a general explanation covered by the unresolved question policy.
+
+Disagreements: 1 items
+  #04 Clarity      Missed failure(LLM=pass You=fail)  Reason: The answer addresses the question directly, but includes some repetitive phrasing ("In other words"), which slightly affects conciseness.
+
+→ Saved to lectures/04/judge_result.json

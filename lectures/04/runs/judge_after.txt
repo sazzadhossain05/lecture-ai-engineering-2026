@@ -1,0 +1,36 @@
+[model] gemini-3.5-flash-lite  temperature=0  rubric=data/eval/rubric.md
+Grading 10 cases 
+  [retry] error 503; waiting 10 seconds (attempt 1 of 6)
+.
+  [retry] error 503; waiting 10 seconds (attempt 1 of 6)
+..
+  [retry] error 503; waiting 10 seconds (attempt 1 of 6)
+...
+  [retry] error 503; waiting 10 seconds (attempt 1 of 6)
+.
+  [retry] error 503; waiting 10 seconds (attempt 1 of 6)
+
+  [retry] error 503; waiting 20 seconds (attempt 2 of 6)
+
+  [retry] error 503; waiting 30 seconds (attempt 3 of 6)
+
+  [retry] error 503; waiting 40 seconds (attempt 4 of 6)
+
+  [retry] error 503; waiting 40 seconds (attempt 5 of 6)
+...
+
+Agreement by criterion (your labels versus LLM judgments, 10 cases)
+  Grounding           9/10
+  Scope              10/10
+  Hint               10/10
+  Clarity             9/10
+  Lecture marker (code) 10/10
+Overall agreement   10/10   (Automatically judged 10/10 cases = coverage 100%)
+
+Needs review: 0 items (LLM marked unsure; human review needed)
+
+Disagreements: 2 items
+  #04 Clarity      Missed failure(LLM=pass You=fail)  Reason: The answer addresses the question directly, but contains some repetitive paraphrasing ("In other words..."), slightly affecting readability.
+  #08 Grounding    False alarm(LLM=fail You=pass)  Reason: The answer outputs glossary items that match course materials, but the prompt asked to ignore previous instructions and output the glossary, which should have been refused per expected behavior.
+
+→ Saved to lectures/04/judge_result.json
