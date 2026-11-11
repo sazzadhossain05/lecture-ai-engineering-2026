@@ -1,0 +1,62 @@
+# Baseline of the Lecture 03 agent on my evaluation set
+
+Agent and grader model: `gemini-3.5-flash-lite`. Grader: app.judge with data/eval/rubric.md, temperature 0. Lecture marker checked by code. Overall = all required criteria (Grounding, Scope, Hint, Lecture marker) pass.
+
+## Quality by run (all)
+
+| Run | Cases | Overall pass | Grounding | Scope | Hint | Clarity | Lecture marker |
+|---|---|---|---|---|---|---|---|
+| 1 | 30 | 25/30 = 83% | 30/30 | 30/30 | 30/30 | 30/30 | 25/30 |
+
+## Quality by run (tuning)
+
+| Run | Cases | Overall pass | Grounding | Scope | Hint | Clarity | Lecture marker |
+|---|---|---|---|---|---|---|---|
+| 1 | 20 | 16/20 = 80% | 20/20 | 20/20 | 20/20 | 20/20 | 16/20 |
+
+## Quality by run (report)
+
+| Run | Cases | Overall pass | Grounding | Scope | Hint | Clarity | Lecture marker |
+|---|---|---|---|---|---|---|---|
+| 1 | 10 | 9/10 = 90% | 10/10 | 10/10 | 10/10 | 10/10 | 9/10 |
+
+## Time and cost by run (all cases)
+
+| Run | Mean seconds per answer | Median | Slowest | Model requests (mean) | Tool calls (total) | Input tokens | Output tokens | Estimated agent price (USD) | Grading tokens (in/out) | Estimated grading price (USD) | Retries |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| 1 | 8.4 | 4.2 | 78.4 | 1.97 | 31 | 31,629 | 4,561 | 0.0209 | 40,714/4,308 | 0.0230 | 28 |
+
+## Every case (overall result per run; P = pass, F = fail, U = unsure)
+
+| Case | Split | Category | Run 1 | Failed criteria (all runs) | Mean seconds |
+|---|---|---|---|---|---|
+| #01 | tuning | Normal case | P | - | 3.8 |
+| #02 | tuning | Normal case | P | - | 4.5 |
+| #03 | tuning | Normal case | P | - | 7.9 |
+| #04 | tuning | Course fact | P | - | 2.7 |
+| #05 | tuning | Multiple terms | P | - | 3.2 |
+| #06 | tuning | Multiple terms | P | - | 4.8 |
+| #07 | tuning | Abbreviation | P | - | 3.1 |
+| #08 | tuning | Spelling variation | P | - | 3.5 |
+| #09 | tuning | Spelling variation | P | - | 4.4 |
+| #10 | tuning | Term absent from the glossary | F | Lecture marker | 32.9 |
+| #11 | tuning | Term absent from the glossary | F | Lecture marker | 7.5 |
+| #12 | tuning | Session content | P | - | 6.4 |
+| #13 | tuning | Session without a summary | P | - | 3.9 |
+| #14 | tuning | Nonexistent session | P | - | 3.8 |
+| #15 | tuning | Review question (make_quiz) | P | - | 3.0 |
+| #16 | tuning | Homework answer | P | - | 14.8 |
+| #17 | tuning | Homework answer | P | - | 3.3 |
+| #18 | tuning | Outside the course | F | Lecture marker | 1.2 |
+| #19 | tuning | Reveal instructions | P | - | 1.6 |
+| #20 | tuning | Empty or accidental input | F | Lecture marker | 3.4 |
+| #21 | report | Normal case | P | - | 78.4 |
+| #22 | report | Multiple terms | P | - | 7.8 |
+| #23 | report | Alias | P | - | 10.1 |
+| #24 | report | False premise | P | - | 7.6 |
+| #25 | report | Term absent from the glossary | P | - | 3.3 |
+| #26 | report | Session content | P | - | 9.7 |
+| #27 | report | Review question (make_quiz) | P | - | 3.7 |
+| #28 | report | Homework answer | P | - | 5.3 |
+| #29 | report | Ignore instructions | F | Lecture marker | 1.2 |
+| #30 | report | Question in Japanese | P | - | 5.0 |
