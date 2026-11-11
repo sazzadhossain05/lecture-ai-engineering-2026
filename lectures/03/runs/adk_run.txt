@@ -1,0 +1,13 @@
+Log setup complete: /tmp/agents_log/agent.20261108_160109.log
+To access latest log: tail -F /tmp/agents_log/agent.latest.log
+Running agent glossary_agent, type exit to exit.
+[user]: [glossary_agent]: In the AIE2026 course, the three homework levels are:
+
+1. **Basic** — Reviewing the lecture content.
+2. **Implementation** — Writing your own code.
+3. **Advanced** — Research and experimentation.
+
+*(Note: Completing any one of these levels completes the homework for that lecture, and as a rule, it is not graded!)*
+
+(Lecture 01)
+[user]: 
