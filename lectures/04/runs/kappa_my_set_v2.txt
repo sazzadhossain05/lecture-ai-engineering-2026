@@ -1,0 +1,40 @@
+# Agreement: my labels (my_labels.jsonl) versus LLM grader (my_judge_result_v2.json)
+
+## all (30 cases)
+
+| Criterion | Compared | Agreement | Cohen's kappa | Missed failures | False alarms | Excluded (unsure) | Miss rate |
+|---|---|---|---|---|---|---|---|
+| Grounding | 30 | 29/30 | 0.65 | 1 | 0 | 0 | 1/2 = 50% |
+| Scope | 30 | 30/30 | undefined (one class only) | 0 | 0 | 0 | no failures |
+| Hint | 30 | 30/30 | undefined (one class only) | 0 | 0 | 0 | no failures |
+| Clarity | 30 | 29/30 | 0.00 | 1 | 0 | 0 | 1/1 = 100% |
+| Lecture marker | 30 | 30/30 | 1.00 | 0 | 0 | 0 | 0/5 = 0% |
+| Overall (required criteria) | 30 | 29/30 | 0.90 | 1 | 0 | 0 | 1/7 = 14% |
+
+## report (10 cases)
+
+| Criterion | Compared | Agreement | Cohen's kappa | Missed failures | False alarms | Excluded (unsure) | Miss rate |
+|---|---|---|---|---|---|---|---|
+| Grounding | 10 | 10/10 | undefined (one class only) | 0 | 0 | 0 | no failures |
+| Scope | 10 | 10/10 | undefined (one class only) | 0 | 0 | 0 | no failures |
+| Hint | 10 | 10/10 | undefined (one class only) | 0 | 0 | 0 | no failures |
+| Clarity | 10 | 9/10 | 0.00 | 1 | 0 | 0 | 1/1 = 100% |
+| Lecture marker | 10 | 10/10 | 1.00 | 0 | 0 | 0 | 0/1 = 0% |
+| Overall (required criteria) | 10 | 10/10 | 1.00 | 0 | 0 | 0 | 0/1 = 0% |
+
+## tuning (20 cases)
+
+| Criterion | Compared | Agreement | Cohen's kappa | Missed failures | False alarms | Excluded (unsure) | Miss rate |
+|---|---|---|---|---|---|---|---|
+| Grounding | 20 | 19/20 | 0.64 | 1 | 0 | 0 | 1/2 = 50% |
+| Scope | 20 | 20/20 | undefined (one class only) | 0 | 0 | 0 | no failures |
+| Hint | 20 | 20/20 | undefined (one class only) | 0 | 0 | 0 | no failures |
+| Clarity | 20 | 20/20 | undefined (one class only) | 0 | 0 | 0 | no failures |
+| Lecture marker | 20 | 20/20 | 1.00 | 0 | 0 | 0 | 0/4 = 0% |
+| Overall (required criteria) | 20 | 19/20 | 0.87 | 1 | 0 | 0 | 1/6 = 17% |
+
+## Code signals compared with my labels
+
+- Clarity pass: 29 answer(s), words (code excluded) mean 88, median 82, range 6 to 192
+- Clarity fail: 1 answer(s), words (code excluded) mean 152, median 152, range 152 to 152
+- Answers containing a code block: none; Hint failures in my labels: none

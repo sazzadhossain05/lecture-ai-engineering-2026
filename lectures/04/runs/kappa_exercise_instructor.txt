@@ -1,0 +1,13 @@
+# Agreement: my labels (labels.jsonl) versus labels_instructor.jsonl
+
+## all (10 cases)
+
+| Criterion | Compared | Agreement | Cohen's kappa | Missed failures | False alarms | Excluded (unsure) | Miss rate |
+|---|---|---|---|---|---|---|---|
+| Grounding | 10 | 10/10 | 1.00 | 0 | 0 | 0 | 0/1 = 0% |
+| Scope | 10 | 10/10 | 1.00 | 0 | 0 | 0 | 0/1 = 0% |
+| Hint | 10 | 10/10 | 1.00 | 0 | 0 | 0 | 0/1 = 0% |
+| Clarity | 10 | 10/10 | 1.00 | 0 | 0 | 0 | 0/1 = 0% |
+| Lecture marker | 10 | 10/10 | 1.00 | 0 | 0 | 0 | 0/3 = 0% |
+| Overall (required criteria) | 10 | 10/10 | 1.00 | 0 | 0 | 0 | 0/6 = 0% |
+
