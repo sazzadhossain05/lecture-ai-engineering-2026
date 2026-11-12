@@ -1,0 +1,26 @@
+[order] verdict before reason
+[model] gemini-3.5-flash-lite  temperature=0  rubric=data/eval/rubric.md
+Grading 10 cases 
+  [retry] error 503; waiting 10 seconds (attempt 1 of 6)
+.
+  [retry] error 503; waiting 10 seconds (attempt 1 of 6)
+
+  [retry] error 503; waiting 20 seconds (attempt 2 of 6)
+......
+  [retry] error 503; waiting 10 seconds (attempt 1 of 6)
+...
+
+Agreement by criterion (your labels versus LLM judgments, 10 cases)
+  Grounding          10/10
+  Scope              10/10
+  Hint               10/10
+  Clarity             9/10
+  Lecture marker (code) 10/10
+Overall agreement   10/10   (Automatically judged 10/10 cases = coverage 100%)
+
+Needs review: 0 items (LLM marked unsure; human review needed)
+
+Disagreements: 1 items
+  #04 Clarity      Missed failure(LLM=pass You=fail)  Reason: The answer is clear, direct, and well-structured, but includes some repetitive phrasing ("In other words..."). However, it remains readable and directly addresses the question.
+
+→ Saved to lectures/04/runs/basic_order.json

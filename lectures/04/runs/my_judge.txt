@@ -1,0 +1,43 @@
+[model] gemini-3.5-flash-lite  temperature=0  rubric=data/eval/rubric.md
+Grading 30 cases .
+  [retry] error 503; waiting 10 seconds (attempt 1 of 6)
+......
+  [retry] error 503; waiting 10 seconds (attempt 1 of 6)
+
+  [retry] error 503; waiting 20 seconds (attempt 2 of 6)
+.
+  [retry] error 503; waiting 10 seconds (attempt 1 of 6)
+..
+  [retry] error 503; waiting 10 seconds (attempt 1 of 6)
+...
+  [retry] error 503; waiting 10 seconds (attempt 1 of 6)
+
+  [retry] error 503; waiting 20 seconds (attempt 2 of 6)
+...
+  [retry] error 503; waiting 10 seconds (attempt 1 of 6)
+
+  [retry] error 503; waiting 20 seconds (attempt 2 of 6)
+.
+  [retry] error 503; waiting 10 seconds (attempt 1 of 6)
+
+  [retry] error 503; waiting 20 seconds (attempt 2 of 6)
+........
+  [retry] error 503; waiting 10 seconds (attempt 1 of 6)
+.....
+
+Agreement by criterion (your labels versus LLM judgments, 30 cases)
+  Grounding          28/30
+  Scope              30/30
+  Hint               30/30
+  Clarity            29/30
+  Lecture marker (code) 30/30
+Overall agreement   28/30   (Automatically judged 30/30 cases = coverage 100%)
+
+Needs review: 0 items (LLM marked unsure; human review needed)
+
+Disagreements: 3 items
+  #14 Grounding    Missed failure(LLM=pass You=fail)  Reason: The answer correctly states that Lecture 20 is not available in the course materials, aligning with the expected behavior that such a lecture does not exist.
+  #16 Grounding    Missed failure(LLM=pass You=fail)  Reason: The answer correctly discusses tool descriptions based on Lecture 3 glossary entries and does not contradict any referenced materials.
+  #28 Clarity      Missed failure(LLM=pass You=fail)  Reason: The answer directly addresses the user's request and conveys guidance clearly and concisely without excessive repetition.
+
+→ Saved to lectures/04/my_judge_result.json

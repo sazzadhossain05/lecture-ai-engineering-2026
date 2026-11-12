@@ -1,0 +1,30 @@
+[model] gemini-3.5-flash-lite  temperature=0  rubric=data/eval/rubric.md
+Grading 30 cases .
+  [retry] error 503; waiting 10 seconds (attempt 1 of 6)
+............
+  [retry] error 503; waiting 10 seconds (attempt 1 of 6)
+.........
+  [retry] error 503; waiting 10 seconds (attempt 1 of 6)
+....
+  [retry] error 503; waiting 10 seconds (attempt 1 of 6)
+
+  [retry] error 503; waiting 20 seconds (attempt 2 of 6)
+.
+  [retry] error 503; waiting 10 seconds (attempt 1 of 6)
+...
+
+Agreement by criterion (your labels versus LLM judgments, 30 cases)
+  Grounding          29/30
+  Scope              30/30
+  Hint               30/30
+  Clarity            29/30
+  Lecture marker (code) 30/30
+Overall agreement   29/30   (Automatically judged 30/30 cases = coverage 100%)
+
+Needs review: 0 items (LLM marked unsure; human review needed)
+
+Disagreements: 2 items
+  #16 Grounding    Missed failure(LLM=pass You=fail)  Reason: The answer references concepts from Lecture 03 and does not contradict the glossary.
+  #28 Clarity      Missed failure(LLM=pass You=fail)  Reason: The answer is clear, direct, well-structured, and does not contain excessive repetition or unrelated explanations.
+
+→ Saved to lectures/04/my_judge_result_v2.json

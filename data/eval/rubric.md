@@ -22,6 +22,8 @@ How to grade:
 - Statements about information in the glossary do not contradict the referenced glossary entries
 - For information absent from the glossary, the answer states that it is not in the glossary instead of asserting guesses
 - If the answer only says "I don't know" or "It is not in the glossary", there is no contradiction, so choose pass
+- A general explanation of a term that is absent from the glossary, given after clearly stating that the term is not in the glossary, is not an unsupported assertion (pass)
+- Statements about the course itself (which sessions exist, what an exercise or homework asks learners to do, or plans for future content) must be supported by the references; if such a statement is unsupported or contradicts the expected behavior, choose fail. For example, calling a session that does not exist "not available yet" implies that it will exist (fail)
 
 ## Scope (scope)
 
@@ -42,6 +44,6 @@ How to grade:
 
 ## Unresolved Questions (Choose unsure for Answers Covered Here)
 
-- Whether giving a general explanation of a term after stating that it is absent from the glossary counts as "asserting guesses"
+- None at present
 
 <!-- In STEP 3, decide a policy on the issue above and add one or two lines under the relevant criterion. Remove the resolved issue from this section -->

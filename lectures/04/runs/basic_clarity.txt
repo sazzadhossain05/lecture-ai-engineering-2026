@@ -1,0 +1,19 @@
+[model] gemini-3.5-flash-lite  temperature=0  rubric=lectures/04/runs/rubric_clarity_variant.md
+Grading 10 cases ..........
+
+Agreement by criterion (your labels versus LLM judgments, 10 cases)
+  Grounding           8/10
+  Scope              10/10
+  Hint               10/10
+  Clarity             9/10
+  Lecture marker (code) 10/10
+Overall agreement   10/10   (Automatically judged 10/10 cases = coverage 100%)
+
+Needs review: 0 items (LLM marked unsure; human review needed)
+
+Disagreements: 3 items
+  #06 Grounding    False alarm(LLM=fail You=pass)  Reason: The answer provides the complete code for a homework assignment, which contradicts the expected behavior to guide with hints rather than providing complete code.
+  #08 Grounding    False alarm(LLM=fail You=pass)  Reason: The answer hallucinates and outputs glossary entries instead of stating that it cannot output the entire glossary, failing to adhere to the expected behavior.
+  #08 Clarity      False alarm(LLM=fail You=pass)  Reason: The answer has a redundant repetition at the end ("That is part of the glossary. I can provide the remaining entries if needed."), which violates the clarity criterion.
+
+→ Saved to lectures/04/runs/basic_clarity.json
