@@ -1,0 +1,42 @@
+# Retrieval comparison on questions with known evidence pages
+
+Same query embedding for every method. No answers are generated here; this measures only what each method returns.
+Characters = total page text returned (a rough measure of added input).
+
+## Summary
+
+| Method | Evidence pages found (of 11) | Questions with all evidence (of 5) | Average pages returned | Average characters returned |
+|---|---|---|---|---|
+| Vector search, top 5 (provided) | 10 | 4 | 5.0 | 4,777 |
+| Vector search, top 10 (Basic) | 11 | 5 | 10.0 | 9,057 |
+| Vector top 5 + adjacent pages (Implementation) | 11 | 5 | 12.7 | 10,717 |
+| Graph (provided) | 10 | 4 | 10.0 | 8,899 |
+| Hybrid (Advanced) | 11 | 5 | 7.0 | 6,539 |
+
+## Per question (evidence found · pages · characters)
+
+| Method | q1_lora | q2_memory | q3_properties | q4_rag_vs_ft | q5_stop | q6_absent |
+|---|---|---|---|---|---|---|
+| Vector search, top 5 (provided) | 1/1 · 5 p · 5,844 ch | 3/3 · 5 p · 3,929 ch | 2/2 · 5 p · 3,977 ch | 2/3 · 5 p · 5,666 ch | 2/2 · 5 p · 3,488 ch | n/a · 5 p · 5,757 ch |
+| Vector search, top 10 (Basic) | 1/1 · 10 p · 11,428 ch | 3/3 · 10 p · 6,948 ch | 2/2 · 10 p · 7,586 ch | 3/3 · 10 p · 10,048 ch | 2/2 · 10 p · 7,362 ch | n/a · 10 p · 10,971 ch |
+| Vector top 5 + adjacent pages (Implementation) | 1/1 · 11 p · 11,464 ch | 3/3 · 11 p · 8,084 ch | 2/2 · 13 p · 7,686 ch | 3/3 · 15 p · 14,230 ch | 2/2 · 11 p · 8,152 ch | n/a · 15 p · 14,688 ch |
+| Graph (provided) | 1/1 · 10 p · 11,019 ch | 2/3 · 10 p · 9,364 ch | 2/2 · 10 p · 5,993 ch | 3/3 · 10 p · 8,766 ch | 2/2 · 10 p · 7,318 ch | n/a · 10 p · 10,933 ch |
+| Hybrid (Advanced) | 1/1 · 7 p · 7,931 ch | 3/3 · 7 p · 5,096 ch | 2/2 · 7 p · 5,203 ch | 3/3 · 7 p · 7,603 ch | 2/2 · 7 p · 5,626 ch | n/a · 7 p · 7,774 ch |
+
+## Ablation of the hybrid method
+
+| Method | Evidence pages found (of 11) | Questions with all evidence (of 5) | Average pages returned | Average characters returned |
+|---|---|---|---|---|
+| Hybrid (Advanced) | 11 | 5 | 7.0 | 6,539 |
+| Hybrid without the divider-page filter | 11 | 5 | 7.0 | 6,468 |
+| Hybrid without keeping a page per named lecture | 11 | 5 | 7.0 | 6,539 |
+| Hybrid without the question-term bonus | 11 | 5 | 7.0 | 6,643 |
+| Hybrid without the per-section cap | 11 | 5 | 7.0 | 6,636 |
+| Vector search, top 7 (same page count as hybrid) | 11 | 5 | 7.0 | 6,457 |
+
+## Where the evidence pages rank by similarity alone (214 pages)
+
+- q1_lora: lec02-main-p052 = rank 1
+- q2_memory: lec03-main-p013 = rank 5, lec03-main-p039 = rank 2, lec03-main-p040 = rank 4
+
+Saved: lectures/05/runs/retrieval_eval.md

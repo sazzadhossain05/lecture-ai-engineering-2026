@@ -1,0 +1,26 @@
+$ uv run python -m app.agent --trace  "To add new knowledge to a chatbot, why does the course recommend RAG before fine-tuning, and how does the example chatbot in Lecture 01 use RAG?"
+
+[model] gemini-3.5-flash-lite
+[search] RAG_TOP_K=5
+Based on the course materials:
+
+### Why RAG is recommended before Fine-Tuning (FT) for adding knowledge
+* **Fine-tuning does not fix the knowledge problem:** Fine-tuning is typically used to change output formats (such as enforcing a specific JSON structure), style, tone, or behavior rather than reliably instilling factual knowledge (Lecture 2, p. 53). 
+* **Fact-dependent questions require external materials:** Questions that depend on specific facts (such as details found only in lecture materials) are unlikely to be answerable via fine-tuning alone. Instead, the course recommends using RAG to retrieve and provide those materials directly to the model (Lecture 2, p. 53).
+
+### How the example chatbot in Lecture 01 uses RAG
+The example chatbot follows a **"search, then answer"** approach via Retrieval-Augmented Generation (Lecture 1, p. 49):
+1. **Preparation (Indexing):** It collects source materials (like lecture documents), filters out unneeded content, splits the documents into small pieces (chunking), and builds a search index (Lecture 1, p. 49).
+2. **Answering:** When a user asks a question, a retriever finds relevant materials from the index. The LLM then generates an answer based on those retrieved materials and displays the source materials alongside the response (Lecture 1, p. 19, 49).
+
+***
+
+*Hint for further thinking:* Consider how separating knowledge retrieval from the language model's parametric memory makes it easier to update your chatbot when the underlying source documents change.
+
+--- trace ---
+[tool call]   search_materials({'query': 'RAG fine-tuning chatbot Lecture 01'})
+[tool return] search_materials -> {"results": [{"page_id": "lec01-main-p049", "document_id": "lec01-main", "lecture": 1, "document_title": "Introduction t…
+  Pages returned: results: lec01-main-p049, lec01-main-p019, lec02-main-p003, lec02-main-p053, lec02-main-p024
+[time] Answer completed in 44.08 seconds (including retrieval and embedding)
+[usage] Input 2,599 tokens / Output 364 tokens / Model responses 2
+[cost] Estimated generation API cost: $0.001690 USD (excludes embedding and index construction)

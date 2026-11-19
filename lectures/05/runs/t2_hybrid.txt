@@ -1,0 +1,19 @@
+$ uv run python -m app.agent --trace --hybrid "Lecture 03 warns about compounding errors in agents. Which trend from Lecture 01 does it build on, and how likely is an agent to succeed over 20 steps at 95% per step?"
+
+[model] gemini-3.5-flash-lite
+[search] RAG_TOP_K=5
+Based on the lecture materials:
+
+* **The Trend Built Upon:** Lecture 03 builds on the trend from Lecture 01 (page 9) showing that **the length of tasks AI can complete autonomously doubles about every four months** (as measured by METR's time-horizon metrics) (Lecture 3, translated PDF p.19; Lecture 1, translated PDF p.9).
+* **Success Probability:** Assuming independent steps with a **95% success rate per step**, the chance of achieving **20 consecutive successes** is approximately **36%** (Lecture 3, translated PDF p.19).
+
+--- trace ---
+[tool call]   search_hybrid({'query': 'compounding errors agents Lecture 03 Lecture 01 trend 20 steps 95 percent'})
+[tool return] search_hybrid -> {"results": [{"page_id": "lec03-main-p019", "document_id": "lec03-main", "lecture": 3, "document_title": "AI Agents", "s…
+  Pages returned: results: lec03-main-p019, lec03-main-p064, lec03-main-p003, lec03-main-p046, lec03-main-p021, lec03-main-p020, lec01-main-p053
+[tool call]   search_hybrid({'query': 'Lecture 1 page 9 trend compounding errors METR time horizon'})
+[tool return] search_hybrid -> {"results": [{"page_id": "lec03-main-p019", "document_id": "lec03-main", "lecture": 3, "document_title": "AI Agents", "s…
+  Pages returned: results: lec03-main-p019, lec03-main-p064, lec01-main-p009, lec01-main-p027, lec01-main-p042, lec02-main-p003, lec02-main-p037
+[time] Answer completed in 8.28 seconds (including retrieval and embedding)
+[usage] Input 10,330 tokens / Output 197 tokens / Model responses 3
+[cost] Estimated generation API cost: $0.003592 USD (excludes embedding and index construction)

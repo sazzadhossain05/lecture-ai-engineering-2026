@@ -3,12 +3,15 @@ __pycache__/
 .pytest_cache/
 *.pyc
 
-# 秘密情報はコミットしない（APIキーは Codespaces secret で渡す）
+# Do not commit secrets (pass API keys through Codespaces secrets)
 .env
 .env.*
 
-# 個人の学習ログ（第3回の宿題で作成）は共有しない
+# Do not share personal learning logs (created in Lecture 03 homework)
 learning_log/
 
 # macOS
 .DS_Store
+
+# Lecture 05: search databases regenerated from the materials
+.cache/rag/

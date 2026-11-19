@@ -1,0 +1,42 @@
+# Retrieval comparison on questions with known evidence pages
+
+Same query embedding for every method. No answers are generated here; this measures only what each method returns.
+Characters = total page text returned (a rough measure of added input).
+
+## Summary
+
+| Method | Evidence pages found (of 6) | Questions with all evidence (of 3) | Average pages returned | Average characters returned |
+|---|---|---|---|---|
+| Vector search, top 5 (provided) | 4 | 1 | 5.0 | 3,522 |
+| Vector search, top 10 (Basic) | 4 | 1 | 10.0 | 8,094 |
+| Vector top 5 + adjacent pages (Implementation) | 4 | 1 | 13.7 | 10,570 |
+| Graph (provided) | 3 | 0 | 10.0 | 7,547 |
+| Hybrid (Advanced) | 4 | 1 | 7.0 | 6,212 |
+
+## Per question (evidence found · pages · characters)
+
+| Method | t1_rsi | t2_errors | t3_schedule |
+|---|---|---|---|
+| Vector search, top 5 (provided) | 2/2 · 5 p · 2,820 ch | 1/2 · 5 p · 3,212 ch | 1/2 · 5 p · 4,535 ch |
+| Vector search, top 10 (Basic) | 2/2 · 10 p · 7,393 ch | 1/2 · 10 p · 7,360 ch | 1/2 · 10 p · 9,529 ch |
+| Vector top 5 + adjacent pages (Implementation) | 2/2 · 13 p · 8,512 ch | 1/2 · 13 p · 8,129 ch | 1/2 · 15 p · 15,068 ch |
+| Graph (provided) | 1/2 · 10 p · 6,076 ch | 1/2 · 10 p · 7,296 ch | 1/2 · 10 p · 9,268 ch |
+| Hybrid (Advanced) | 2/2 · 7 p · 5,758 ch | 1/2 · 7 p · 6,134 ch | 1/2 · 7 p · 6,745 ch |
+
+## Ablation of the hybrid method
+
+| Method | Evidence pages found (of 6) | Questions with all evidence (of 3) | Average pages returned | Average characters returned |
+|---|---|---|---|---|
+| Hybrid (Advanced) | 4 | 1 | 7.0 | 6,212 |
+| Hybrid without the divider-page filter | 4 | 1 | 7.0 | 5,518 |
+| Hybrid without keeping a page per named lecture | 4 | 1 | 7.0 | 5,835 |
+| Hybrid without the question-term bonus | 4 | 1 | 7.0 | 6,212 |
+| Hybrid without the per-section cap | 4 | 1 | 7.0 | 6,212 |
+| Vector search, top 7 (same page count as hybrid) | 4 | 1 | 7.0 | 5,085 |
+
+## Where the evidence pages rank by similarity alone (214 pages)
+
+- t1_rsi: lec01-main-p010 = rank 4, lec03-main-p055 = rank 1
+- t2_errors: lec03-main-p019 = rank 1, lec01-main-p009 = rank 51
+
+Saved: lectures/05/runs/target_eval.md

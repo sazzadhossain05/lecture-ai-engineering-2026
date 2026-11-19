@@ -8,6 +8,8 @@ import json
 from functools import cache
 from pathlib import Path
 
+from app.config import api_error_message
+
 DATA_DIR = Path(__file__).resolve().parent.parent / "data"
 MAX_RESULTS = 3
 
@@ -77,3 +79,86 @@ def get_lecture_summary(lecture: int) -> str:
         available = sorted(p.stem for p in (DATA_DIR / "lectures").glob("*.md"))
         return f"Key points for Lecture {lecture:02d} are not available yet. Available sessions: {', '.join(available)}"
     return path.read_text(encoding="utf-8")
+
+def search_materials(query: str) -> str:
+    """Search the main materials for Lectures 01–03 and return relevant page text, titles, and page numbers.
+
+    Use query to specify what you want to look up.
+    """
+    from google.genai.errors import APIError
+    import sqlite3
+    from app.retrieval import search
+
+    try:
+        return json.dumps({"results": search(query)}, ensure_ascii=False)
+    except (ValueError, FileNotFoundError, sqlite3.Error) as e:
+        return json.dumps({"error": str(e), "results": []}, ensure_ascii=False)
+    except APIError as e:
+        return json.dumps({"error": api_error_message(e.code), "results": []}, ensure_ascii=False)
+
+
+def search_materials_with_neighbors(query: str) -> str:
+    """Search the main materials for Lectures 01–03 and return relevant pages plus the page just before and after each one.
+
+    Use query to specify what you want to look up. Pages with role "neighbor" were added because they sit next to a hit
+    (see neighbor_of); they may continue the explanation or may be unrelated, so check their text.
+    """
+    from google.genai.errors import APIError
+    import sqlite3
+    from app.retrieval import search_with_neighbors
+
+    try:
+        return json.dumps({"results": search_with_neighbors(query)}, ensure_ascii=False)
+    except (ValueError, FileNotFoundError, sqlite3.Error) as e:
+        return json.dumps({"error": str(e), "results": []}, ensure_ascii=False)
+    except APIError as e:
+        return json.dumps({"error": api_error_message(e.code), "results": []}, ensure_ascii=False)
+
+
+def search_hybrid(query: str) -> str:
+    """Search the main materials for Lectures 01–03 and return up to 7 relevant pages, chosen across sections.
+
+    Combines vector search with links between pages (the next page, shared course terms), then keeps the pages
+    closest to the question. `why` tells you how each page was found. Use query to specify what you want to look up;
+    for questions that combine topics, search each topic separately.
+    """
+    from google.genai.errors import APIError
+    import sqlite3
+    from app.retrieval import search_hybrid as search
+
+    try:
+        return json.dumps(search(query), ensure_ascii=False)
+    except (ValueError, OSError, sqlite3.Error) as e:
+        return json.dumps({"error": str(e), "results": []}, ensure_ascii=False)
+    except APIError as e:
+        return json.dumps({"error": api_error_message(e.code), "results": []}, ensure_ascii=False)
+
+
+def browse_tree(node_id: str | None = None) -> str:
+    """Return the table of contents and the first sentence of each page. Specify a page ID to get its full text.
+
+    Omit node_id on the first call. Then follow the table of contents using the returned IDs.
+    """
+    from app.retrieval import browse_tree as browse
+
+    try:
+        return json.dumps(browse(node_id), ensure_ascii=False)
+    except (ValueError, OSError) as e:
+        return json.dumps({"error": str(e)}, ensure_ascii=False)
+
+
+def search_graph(query: str) -> str:
+    """Search the materials, then follow adjacent pages and shared terms to return related page text and citation metadata.
+
+    Use query to specify what you want to look up.
+    """
+    import sqlite3
+    from google.genai.errors import APIError
+    from app.retrieval import search_graph as search
+
+    try:
+        return json.dumps(search(query), ensure_ascii=False)
+    except (ValueError, OSError, sqlite3.Error) as e:
+        return json.dumps({"error": str(e)}, ensure_ascii=False)
+    except APIError as e:
+        return json.dumps({"error": api_error_message(e.code)}, ensure_ascii=False)

@@ -1,0 +1,27 @@
+$ uv run python -m app.agent --trace --hybrid "What are the three ways to stop an agent loop, and who should decide whether the task is done?"
+
+[model] gemini-3.5-flash-lite
+[search] RAG_TOP_K=5
+According to Lecture 3 (Part 7, "Stop Conditions and Failure Behavior"), there are **three ways to stop an agent loop**:
+
+1. **Model:** The loop ends when the model decides it is "done" (by stopping tool calls or ending its output). However, left alone, the model may stop too early or never stop.
+2. **Harness:** The loop stops at a set limit enforced by the harness (such as repeated failures, or exceeding time or budget limits), rather than being self-reported by the model.
+3. **Human / Monitor:** The loop is stopped from the outside—for example, when a person presses a stop button. The agent itself cannot turn this off.
+
+---
+
+### Who should decide whether the task is done?
+
+Materials emphasize that **someone other than the working model** should decide if a task is truly done (Lecture 3, p. 43–44):
+* **Relying solely on the working model is risky**, because models can falsely claim to be "done" even after failing or tampering with tests.
+* Instead, completion should be decided by **external evidence and independent checks**, such as:
+  * A **separate judge model** (e.g., using a smaller model to evaluate each turn's results).
+  * A **fixed evaluation script** that the agent cannot modify (e.g., checking test results, diffs, logs, or state records rather than just taking the agent's word for it).
+
+--- trace ---
+[tool call]   search_hybrid({'query': 'three ways to stop an agent loop stop criteria task is done'})
+[tool return] search_hybrid -> {"results": [{"page_id": "lec03-main-p043", "document_id": "lec03-main", "lecture": 3, "document_title": "AI Agents", "s…
+  Pages returned: results: lec03-main-p043, lec03-main-p044, lec03-main-p048, lec03-main-p046, lec03-main-p026, lec03-main-p020, lec03-main-p025
+[time] Answer completed in 19.48 seconds (including retrieval and embedding)
+[usage] Input 3,488 tokens / Output 341 tokens / Model responses 2
+[cost] Estimated generation API cost: $0.001899 USD (excludes embedding and index construction)

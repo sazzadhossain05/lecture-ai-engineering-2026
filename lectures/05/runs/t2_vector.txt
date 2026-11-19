@@ -1,0 +1,22 @@
+$ uv run python -m app.agent --trace  "Lecture 03 warns about compounding errors in agents. Which trend from Lecture 01 does it build on, and how likely is an agent to succeed over 20 steps at 95% per step?"
+
+[model] gemini-3.5-flash-lite
+[search] RAG_TOP_K=5
+Based on Lecture 03 (slide 19), here is how compounding errors are addressed:
+
+* **Likelihood of success over 20 steps:** Assuming independent steps with a 95% success rate per step, the chance of 20 consecutive successes is **about 36%** (Lecture 3, p. 19). 
+* **Trend from Lecture 01:** Lecture 03 notes that this compounding error concept and calculation is the **same as Lecture 1, page 9** (Lecture 3, p. 19). *(Note: While the referenced slide number points to Lecture 1, the underlying trend builds on how multi-step agent loops accumulate errors over time/steps.)*
+
+--- trace ---
+[tool call]   search_materials({'query': 'compounding errors 20 steps 95%'})
+[tool return] search_materials -> {"results": [{"page_id": "lec03-main-p019", "document_id": "lec03-main", "lecture": 3, "document_title": "AI Agents", "s…
+  Pages returned: results: lec03-main-p019, lec02-main-p017, lec03-main-p018, lec02-main-p016, lec03-main-p046
+[tool call]   search_materials({'query': 'Lecture 1 page 9 compounding errors'})
+[tool return] search_materials -> {"results": [{"page_id": "lec03-main-p019", "document_id": "lec03-main", "lecture": 3, "document_title": "AI Agents", "s…
+  Pages returned: results: lec03-main-p019, lec03-main-p018, lec01-main-p046, lec02-main-p003, lec02-main-p017
+[tool call]   search_materials({'query': 'Lecture 1 page 9'})
+[tool return] search_materials -> {"results": [{"page_id": "lec01-main-p038", "document_id": "lec01-main", "lecture": 1, "document_title": "Introduction t…
+  Pages returned: results: lec01-main-p038, lec02-main-p009, lec02-main-p017, lec01-main-p036, lec02-main-p003
+[time] Answer completed in 10.74 seconds (including retrieval and embedding)
+[usage] Input 10,431 tokens / Output 224 tokens / Model responses 4
+[cost] Estimated generation API cost: $0.003689 USD (excludes embedding and index construction)

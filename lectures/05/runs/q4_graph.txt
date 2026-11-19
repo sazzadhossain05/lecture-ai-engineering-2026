@@ -1,0 +1,28 @@
+$ uv run python -m app.agent --trace --graph "To add new knowledge to a chatbot, why does the course recommend RAG before fine-tuning, and how does the example chatbot in Lecture 01 use RAG?"
+
+[model] gemini-3.5-flash-lite
+[search] RAG_TOP_K=5
+Based on the course materials from Lectures 01 and 02, here is how to think about this:
+
+### 1. Why RAG is Recommended Over Fine-Tuning for Adding Knowledge
+* **Nature of the Intervention:** According to Lecture 2, model capabilities and behaviors are structured in different stages [Lecture 2 · p.20]. Knowledge is fundamentally shaped during pre-training, whereas post-training (such as fine-tuning or prompts) primarily adjusts *how* the model answers (its tone, format, or behavior) [Lecture 2 · p.20, p.46].
+* **Efficiency and Accuracy:** Research cited in the course (e.g., Ovadia et al., 2024; Gekhman et al., 2024) indicates that trying to memorize new facts or current documents through small-scale fine-tuning is inefficient, learned slowly, and tends to increase errors or hallucinations [Lecture 2 · p.46, p.47]. Therefore, for adding factual knowledge, providing information externally via RAG is the recommended first-line intervention [Lecture 2 · p.20, p.46].
+
+### 2. How the Example Chatbot in Lecture 01 Uses RAG
+In Lecture 1, the example chatbot follows a **"search, then answer"** approach split into two main phases [Lecture 1 · p.49]:
+* **Preparation (Making materials searchable):** 
+  1. *Data collection:* Gathers source documents (like lecture materials) [Lecture 1 · p.49].
+  2. *Filtering:* Removes unneeded documents [Lecture 1 · p.49].
+  3. *Chunking:* Splits the text into small pieces [Lecture 1 · p.49].
+  4. *Indexing:* Builds a search index so it is ready for retrieval [Lecture 1 · p.49].
+* **Answering (Retrieval and Generation):**
+  1. *Question & Retriever:* When a student asks a question, a retriever searches the index to find relevant materials [Lecture 1 · p.49].
+  2. *LLM Generation:* The Large Language Model generates an answer specifically based on the retrieved materials, and the chatbot also displays the source materials alongside the answer [Lecture 1 · p.49].
+
+--- trace ---
+[tool call]   search_graph({'query': 'RAG fine-tuning lecture 01 02 03'})
+[tool return] search_graph -> {"seeds": [{"page_id": "lec02-main-p047", "document_id": "lec02-main", "lecture": 2, "document_title": "Fundamentals of …
+  Pages returned: seeds: lec02-main-p047, lec01-main-p049, lec02-main-p020 | expanded: lec02-main-p046, lec02-main-p048, lec01-main-p048, lec01-main-p050, lec02-main-p019, lec02-main-p021, lec02-main-p045
+[time] Answer completed in 5.52 seconds (including retrieval and embedding)
+[usage] Input 4,471 tokens / Output 533 tokens / Model responses 2
+[cost] Estimated generation API cost: $0.002674 USD (excludes embedding and index construction)

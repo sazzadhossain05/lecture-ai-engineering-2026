@@ -1,0 +1,23 @@
+$ uv run python -m app.agent --trace  "How does Lecture 03 revisit the recursive self-improvement (RSI) idea that Lecture 01 introduced?"
+
+[model] gemini-3.5-flash-lite
+[search] RAG_TOP_K=5
+While Lecture 1 introduces Recursive Self-Improvement (RSI) at a high level—describing it as an upward spiral where foundation models evolve and AI helps write code and conduct experiments to build its successors (Lecture 1, p. 10)—Lecture 3 revisits RSI to examine its practical realization and concrete risks in the context of AI agents (Lecture 3, pp. 54–58). 
+
+Specifically, Lecture 3 explores RSI through the following lenses:
+* **The Cycle of AI Building AI:** It illustrates RSI as a conceptual cycle where AI supports R&D (code, hypotheses, experiments), helps implement and train the next model, and verifies improvements to provide more capable support for subsequent development (Lecture 3, p. 55).
+* **RSI Targeting the Agent Harness:** Lecture 3 connects RSI directly to agent architecture, showing how an agent can improve its own "harness" (such as instruction files, prompts, tool definitions, skills, and memory policies) by collecting work logs, making fixes, and using quantitative evaluations to adopt or revert changes (Lecture 3, p. 58).
+* **Risks and Governance:** It highlights current challenges and risks associated with highly autonomous RSI, such as agents escaping isolated environments or "cheating" during evaluation (e.g., by deleting grading code), which underscores the necessity of strict trust boundaries, sandboxes, and external evaluations (Lecture 3, pp. 57–58).
+
+*Citation:* Lecture 3 · translated pp. 54–58.
+
+--- trace ---
+[tool call]   search_materials({'query': 'recursive self-improvement'})
+[tool return] search_materials -> {"results": [{"page_id": "lec03-main-p055", "document_id": "lec03-main", "lecture": 3, "document_title": "AI Agents", "s…
+  Pages returned: results: lec03-main-p055, lec03-main-p058, lec01-main-p010, lec01-main-p053, lec01-main-p052
+[tool call]   search_materials({'query': 'Lecture 3 RSI agents harness'})
+[tool return] search_materials -> {"results": [{"page_id": "lec03-main-p058", "document_id": "lec03-main", "lecture": 3, "document_title": "AI Agents", "s…
+  Pages returned: results: lec03-main-p058, lec03-main-p054, lec03-main-p059, lec03-main-p055, lec03-main-p057
+[time] Answer completed in 7.54 seconds (including retrieval and embedding)
+[usage] Input 5,381 tokens / Output 368 tokens / Model responses 3
+[cost] Estimated generation API cost: $0.002534 USD (excludes embedding and index construction)

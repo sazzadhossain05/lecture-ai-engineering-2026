@@ -1,0 +1,17 @@
+$ uv run python -m app.agent --trace --hybrid "In Lecture 02, what does LoRA freeze and what does it train? What does QLoRA add?"
+
+[model] gemini-3.5-flash-lite
+[search] RAG_TOP_K=5
+According to Lecture 02 (pp. 51–52):
+
+* **What LoRA freezes:** The original base model weights ($W$), keeping them unchanged (frozen and not trained) (Lecture 2, pp. 51–52).
+* **What LoRA trains:** Only small added components—specifically, small matrices (denoted as $A$ and $B$) that represent the low-rank change (or delta) to the weights (Lecture 2, pp. 51–52). 
+* **What QLoRA adds:** It adds **compression of the original base weights down to 4 bits** (using a coarser numerical representation) to further reduce memory usage, while still using LoRA to train the small matrices (Lecture 2, pp. 51–52).
+
+--- trace ---
+[tool call]   search_hybrid({'query': 'LoRA freeze train QLoRA add Lecture 02'})
+[tool return] search_hybrid -> {"results": [{"page_id": "lec02-main-p052", "document_id": "lec02-main", "lecture": 2, "document_title": "Fundamentals o…
+  Pages returned: results: lec02-main-p052, lec02-main-p051, lec02-main-p060, lec02-main-p061, lec02-main-p023, lec02-main-p024, lec02-main-p006
+[time] Answer completed in 31.90 seconds (including retrieval and embedding)
+[usage] Input 3,885 tokens / Output 199 tokens / Model responses 2
+[cost] Estimated generation API cost: $0.001663 USD (excludes embedding and index construction)

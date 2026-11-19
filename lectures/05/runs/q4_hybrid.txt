@@ -1,0 +1,36 @@
+$ uv run python -m app.agent --trace --hybrid "To add new knowledge to a chatbot, why does the course recommend RAG before fine-tuning, and how does the example chatbot in Lecture 01 use RAG?"
+
+[model] gemini-3.5-flash-lite
+[search] RAG_TOP_K=5
+Based on the course materials from Lectures 01 and 02, here is why RAG (Retrieval-Augmented Generation) is recommended before fine-tuning for adding new knowledge, along with how the example chatbot uses it:
+
+### Why RAG is Recommended Before Fine-Tuning for New Knowledge
+
+* **Knowledge vs. Behavior:** Fine-tuning (FT) does not fix the knowledge problem (e.g., answering questions about specific facts or recent information depends on source materials that fine-tuning is unlikely to make reliably answerable) (Lecture 2, p. 53). Instead, fine-tuning is best used to change output format, tone, or behavior (Lecture 2, p. 53). 
+* **Research Findings:** Research shows that on knowledge tasks, RAG consistently outperforms fine-tuning directly on documents (Ovadia et al., 2024), whereas trying to learn new knowledge via fine-tuning is slow and tends to increase errors or hallucinations (Gekhman et al., 2024) (Lecture 2, p. 47). 
+* **Core Intervention Rule:** For a knowledge problem (such as dealing with a knowledge cutoff or new information), the course recommends providing the information using RAG or selecting a newer model rather than fine-tuning (Lecture 2, pp. 27, 47).
+
+---
+
+### How the Example Chatbot in Lecture 01 Uses RAG
+
+The example chatbot searches lecture materials to answer questions and cites evidence (Lecture 1, p. 19). It operates in two main phases:
+
+1. **Preparation (Making materials searchable):**
+   * **Data collection:** Collects source materials like lecture notes (Lecture 1, p. 49).
+   * **Filtering:** Removes unneeded documents (Lecture 1, p. 49).
+   * **Chunking:** Splits the text into small pieces (Lecture 1, p. 49).
+   * **Indexing:** Builds a search index so it is ready to search (Lecture 1, p. 49).
+
+2. **Answering (Search, then answer):**
+   * **Question:** Takes a student's question (Lecture 1, p. 49).
+   * **Retriever:** Finds relevant materials in the index (Lecture 1, p. 49).
+   * **LLM:** Generates an answer based on the retrieved materials and also displays the source materials/evidence (Lecture 1, pp. 19, 49).
+
+--- trace ---
+[tool call]   search_hybrid({'query': 'RAG before fine-tuning reason lecture 01 chatbot'})
+[tool return] search_hybrid -> {"results": [{"page_id": "lec01-main-p049", "document_id": "lec01-main", "lecture": 1, "document_title": "Introduction t…
+  Pages returned: results: lec01-main-p049, lec01-main-p019, lec02-main-p053, lec02-main-p003, lec02-main-p027, lec02-main-p047, lec02-main-p024
+[time] Answer completed in 6.35 seconds (including retrieval and embedding)
+[usage] Input 3,789 tokens / Output 571 tokens / Model responses 2
+[cost] Estimated generation API cost: $0.002564 USD (excludes embedding and index construction)

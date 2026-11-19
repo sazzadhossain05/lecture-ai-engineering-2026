@@ -4,11 +4,39 @@ Read API keys and model names from environment variables rather than hard-coding
 """
 
 import os
+from pathlib import Path
 
 # Default model. Set the AIE_MODEL environment variable to switch models.
 #   Example: export AIE_MODEL=gemini-3.5-flash
 DEFAULT_MODEL = "gemini-3.5-flash-lite"
 MODEL = os.getenv("AIE_MODEL", DEFAULT_MODEL)
+
+
+# Lecture 05: search with one page per chunk. Build the index with scripts/build_rag_index.py.
+ROOT = Path(__file__).resolve().parent.parent
+RAG_SOURCE = ROOT / "data/rag_data/lectures.json"
+RAG_TREE = ROOT / "data/rag_data/tree.json"
+RAG_GRAPH = ROOT / "data/rag_data/graph.json"
+RAG_DB = Path(os.getenv("AIE_RAG_DB", str(ROOT / "data/rag_data/index.sqlite3")))
+RAG_DOCUMENT_IDS = ("lec01-main", "lec02-main", "lec03-main")
+# Homework (Basic): the number of pages returned by vector search. The default stays 5; set
+# AIE_RAG_TOP_K (for example, AIE_RAG_TOP_K=10) to compare result counts without editing this file.
+RAG_TOP_K = int(os.getenv("AIE_RAG_TOP_K", "5"))
+# Homework (Implementation): also return this many pages before and after each search hit (same document only).
+RAG_NEIGHBOR_WINDOW = 1
+# Homework (Advanced): question-aware hybrid retrieval = vector search + lecture/section structure + course-term graph.
+HYBRID_MAX_PAGES = 7         # pages returned to the model
+HYBRID_MAX_PER_SECTION = 4   # keep at least 3 places for evidence from other sections and lectures
+HYBRID_MIN_CHARS = 150       # shorter pages are section dividers that hold only a title
+HYBRID_MAX_TERM_PAGES = 30   # ignore very common terms (for example "AI agent", 54 pages): they match almost everything
+HYBRID_TERM_BONUS = 0.01     # score bonus per course term from the question that a page mentions (at most 2 count)
+GRAPH_START_K = 3
+GRAPH_HOPS = 2
+GRAPH_MAX_RESULTS = 10
+EMBEDDING_MODEL = "gemini-embedding-001"
+EMBEDDING_DIMENSIONS = 768
+# Leave room below the 2,048-token limit for the task specification and other overhead. Stop instead of truncating on overflow.
+EMBEDDING_MAX_TOKENS = 2000
 
 
 def api_error_message(status: int, detail: str = "") -> str:

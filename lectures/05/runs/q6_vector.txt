@@ -1,0 +1,17 @@
+$ uv run python -m app.agent --trace  "What are the measured average response time and accuracy of the RAG system we just built?"
+
+[model] gemini-3.5-flash-lite
+[search] RAG_TOP_K=5
+Based on the materials for Lectures 01–03, there are no specific performance metrics (such as measured average response time or overall accuracy) reported for a newly built RAG system. 
+
+As noted in the course materials, trying a model or system once does not reveal its actual accuracy because LLMs select next words probabilistically and can yield different results each time [Lecture 2, p. 13]. To evaluate such a system properly, you would need to test questions multiple times and measure variation, as discussed in Lecture 2 [Lecture 2, p. 13]. 
+
+To help you think about this: how might you design a small test suite (asking a set of questions multiple times) to measure both the correctness and consistency of your RAG system's responses?
+
+--- trace ---
+[tool call]   search_materials({'query': 'average response time accuracy RAG system'})
+[tool return] search_materials -> {"results": [{"page_id": "lec03-main-p064", "document_id": "lec03-main", "lecture": 3, "document_title": "AI Agents", "s…
+  Pages returned: results: lec03-main-p064, lec03-main-p019, lec02-main-p013, lec02-main-p003, lec02-main-p015
+[time] Answer completed in 38.01 seconds (including retrieval and embedding)
+[usage] Input 2,710 tokens / Output 186 tokens / Model responses 2
+[cost] Estimated generation API cost: $0.001278 USD (excludes embedding and index construction)

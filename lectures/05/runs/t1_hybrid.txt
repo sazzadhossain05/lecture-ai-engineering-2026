@@ -1,0 +1,19 @@
+$ uv run python -m app.agent --trace --hybrid "How does Lecture 03 revisit the recursive self-improvement (RSI) idea that Lecture 01 introduced?"
+
+[model] gemini-3.5-flash-lite
+[search] RAG_TOP_K=5
+Lecture 01 introduced Recursive Self-Improvement (RSI) conceptually as an upcoming upward spiral where foundation models evolve and AI assists in R&D to help build its successors (Lecture 1, p. 10). 
+
+Lecture 03 revisits RSI in "Part 10 RSI and Agents" (and related sections) by grounding it in concrete current practices, frameworks, and challenges:
+* **The Cycle in Practice:** It breaks down the RSI cycle where AI supports research, implements/trains, evaluates/refines, and provides more capable support for the next stage of AI development (Lecture 3, p. 55).
+* **Metrics and Reality Check:** It provides current statistics and metrics on AI-accelerated development (such as the high share of merged code written by AI at Anthropic) alongside external evaluations noting that full R&D automation hasn't been reached yet (Lecture 3, pp. 57, 69).
+* **Targeting the Harness:** It explores how agents can target their own harnesses—such as rewriting instruction files, prompts, tool definitions, and memory policies—citing examples like Sakana AI's Darwin Gödel Machine (Lecture 3, p. 58).
+* **Risks and Control:** It addresses the challenges and risks associated with high autonomy and self-improvement, including containment concerns and the need for rigorous evaluation, isolation, and stop/rollback mechanisms (Lecture 3, pp. 57, 58, 69).
+
+--- trace ---
+[tool call]   search_hybrid({'query': 'recursive self-improvement RSI Lecture 01 Lecture 03'})
+[tool return] search_hybrid -> {"results": [{"page_id": "lec03-main-p055", "document_id": "lec03-main", "lecture": 3, "document_title": "AI Agents", "s…
+  Pages returned: results: lec03-main-p055, lec03-main-p058, lec01-main-p010, lec03-main-p057, lec03-main-p069, lec03-main-p021, lec01-main-p026
+[time] Answer completed in 4.71 seconds (including retrieval and embedding)
+[usage] Input 3,428 tokens / Output 346 tokens / Model responses 2
+[cost] Estimated generation API cost: $0.001893 USD (excludes embedding and index construction)

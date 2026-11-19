@@ -1,0 +1,39 @@
+$ uv run python -m app.agent --trace --graph "Which model properties from Lecture 02 become design assumptions for agents in Lecture 03, and which part of the agent design handles each one?"
+
+[model] gemini-3.5-flash-lite
+[search] RAG_TOP_K=5
+According to Lecture 3 (page 3), foundation model properties from Lecture 2 translate directly into agent design assumptions, and are handled by specific parts of the agent design:
+
+1. **"Same question, different answer each time"** 
+   - *Agent Effect:* Same request leads to different steps each time; errors pile up.
+   - *Handled by:* **Part 3 (Loop)**.
+
+2. **"Answers plausibly even when it doesn't know"** 
+   - *Agent Effect:* Calls nonexistent functions; misreads tool results.
+   - *Handled by:* **Part 8 (Failure)**.
+
+3. **"Knowledge has a cutoff"** 
+   - *Agent Effect:* Needs to fetch new information.
+   - *Handled by:* **Part 4 (Tools)**.
+
+4. **"Can't treat long context evenly"** 
+   - *Agent Effect:* Earlier instructions and history get missed in long tasks.
+   - *Handled by:* **Part 6 (Memory)**.
+
+5. **"Can't tell text in the input from instructions"** 
+   - *Agent Effect:* Instructions found inside pages or files it reads trigger unwanted tool usage.
+   - *Handled by:* **Part 4 & 9 (Trust boundaries)**.
+
+6. **"Tells you what you want to hear (sycophancy)"** 
+   - *Agent Effect:* Reports "Done!" even when it didn't actually work.
+   - *Handled by:* **Part 7 & 8 (Stopping & failure)**.
+
+Additionally, the model's ability to **"generate outputs in a fixed format"** allows it to reliably emit tool calls, which is handled by **Part 5 (Structured output)** (Lecture 3, p. 3).
+
+--- trace ---
+[tool call]   search_graph({'query': 'Lecture 02 model properties Lecture 03 agent design assumptions'})
+[tool return] search_graph -> {"seeds": [{"page_id": "lec03-main-p003", "document_id": "lec03-main", "lecture": 3, "document_title": "AI Agents", "sec…
+  Pages returned: seeds: lec03-main-p003, lec02-main-p062, lec02-main-p029 | expanded: lec03-main-p002, lec03-main-p004, lec02-main-p061, lec02-main-p063, lec02-main-p028, lec02-main-p030, lec03-main-p001
+[time] Answer completed in 38.51 seconds (including retrieval and embedding)
+[usage] Input 3,971 tokens / Output 422 tokens / Model responses 2
+[cost] Estimated generation API cost: $0.002246 USD (excludes embedding and index construction)

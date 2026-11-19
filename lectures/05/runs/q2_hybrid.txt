@@ -1,0 +1,20 @@
+$ uv run python -m app.agent --trace --hybrid "In the Lecture 03 examples, how does compaction differ from memory across sessions? Do all daily notes go into long-term memory?"
+
+[model] gemini-3.5-flash-lite
+[search] RAG_TOP_K=5
+Based on Lecture 03, here is how compaction and memory differ, along with how daily notes are handled:
+
+* **Compaction vs. Memory across sessions:** 
+  * **Compaction** compresses history *within the loop* (inside the context of the same session) by replacing old history with a summary (Lecture 3, pp. 39, 65).
+  * **Memory** operates *across sessions* using external storage (such as files or a memory tool), allowing the agent to carry information over to future sessions (Lecture 3, pp. 13, 39).
+
+* **Do all daily notes go into long-term memory?**
+  No, not everything is kept. In the OpenClaw memory architecture example, daily notes undergo a nightly automated review ("dreaming") process to drop duplicates, find recurring themes, and move *only* what passes a certain threshold into long-term memory (`MEMORY.md`). One-off lookups stay only in the daily notes so that long-term memory does not bloat (Lecture 3, p. 40).
+
+--- trace ---
+[tool call]   search_hybrid({'query': 'compaction memory daily notes long term memory Lecture 03'})
+[tool return] search_hybrid -> {"results": [{"page_id": "lec03-main-p065", "document_id": "lec03-main", "lecture": 3, "document_title": "AI Agents", "s…
+  Pages returned: results: lec03-main-p065, lec03-main-p039, lec03-main-p038, lec03-main-p040, lec03-main-p013, lec03-main-p041, lec03-main-p003
+[time] Answer completed in 20.70 seconds (including retrieval and embedding)
+[usage] Input 3,471 tokens / Output 260 tokens / Model responses 2
+[cost] Estimated generation API cost: $0.001691 USD (excludes embedding and index construction)
