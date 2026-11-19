@@ -2,4 +2,19 @@ $ uv run python -m app.agent --trace --neighbors "In Lecture 02, what does LoRA 
 
 [model] gemini-3.5-flash-lite
 [search] RAG_TOP_K=5
-The model is busy (503). Wait a little and try again.
+According to Lecture 2 (specifically pages 51 and 52), here is how LoRA and QLoRA divide what is frozen and what is trained:
+
+* **LoRA (Low-Rank Adaptation):**
+  * **Freezes:** The original model weights ($W$), keeping them unchanged (represented as blue in the lecture diagrams).
+  * **Trains:** Only a small added component—specifically, two thin matrices ($A$ and $B$) whose product represents the low-rank weight changes or "delta" (represented as orange). This trainable portion can be less than 1% of the total parameters.
+
+* **QLoRA:**
+  * **Adds:** Compresses the original base model weights to a coarser 4-bit numerical representation (storing them at 4 bits rather than 16 bits), which significantly reduces memory usage (e.g., down to about 4 GB for a 7-billion-parameter model).
+
+--- trace ---
+[tool call]   search_materials_with_neighbors({'query': 'LoRA freeze train QLoRA add'})
+[tool return] search_materials_with_neighbors -> {"results": [{"page_id": "lec02-main-p052", "document_id": "lec02-main", "lecture": 2, "document_title": "Fundamentals o…
+  Pages returned: results: lec02-main-p052, lec02-main-p053 (neighbor of lec02-main-p052), lec02-main-p050 (neighbor of lec02-main-p051), lec02-main-p051, lec02-main-p046 (neighbor of lec02-main-p047), lec02-main-p047, lec02-main-p048 (neighbor of lec02-main-p047), lec02-main-p059 (neighbor of lec02-main-p060), lec02-main-p060, lec02-main-p061, lec02-main-p062 (neighbor of lec02-main-p061)
+[time] Answer completed in 46.90 seconds (including retrieval and embedding)
+[usage] Input 5,067 tokens / Output 226 tokens / Model responses 2
+[cost] Estimated generation API cost: $0.002085 USD (excludes embedding and index construction)

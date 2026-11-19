@@ -2,4 +2,41 @@ $ uv run python -m app.agent --trace --hybrid "Which model properties from Lectu
 
 [model] gemini-3.5-flash-lite
 [search] RAG_TOP_K=5
-The model is busy (503). Wait a little and try again.
+Based on Lecture 03 (slide 3), foundation model properties from Lecture 02 serve as design assumptions for agents. Here is how each property maps to the agent design components:
+
+1. **"Same question, different answer each time"**
+   * *Agent Impact:* The same request leads to different steps each time, and errors can pile up.
+   * *Handled by:* **Part 3 (Loop)**
+
+2. **"Answers plausibly even when it doesn't know"**
+   * *Agent Impact:* It may call nonexistent functions or misread tool results.
+   * *Handled by:* **Part 8 (Failure)**
+
+3. **"Knowledge has a cutoff"**
+   * *Agent Impact:* Requires fetching new information.
+   * *Handled by:* **Part 4 (Tools)**
+
+4. **"Can't treat long context evenly"**
+   * *Agent Impact:* In long tasks, earlier instructions and history get missed.
+   * *Handled by:* **Part 6 (Memory)**
+
+5. **"Can't tell text in the input from instructions"**
+   * *Agent Impact:* Instructions found inside pages or files it reads can mistakenly trigger tool use.
+   * *Handled by:* **Part 4 & 9 (Tools & Trust boundaries)**
+
+6. **"Tells you what you want to hear (sycophancy)"**
+   * *Agent Impact:* Reports "Done!" even when it didn't actually work.
+   * *Handled by:* **Part 7 & 8 (Stopping & Failure)**
+
+*(Additionally, the model's ability to **generate outputs in a fixed format** is handled by **Part 5 (Structured output)** to reliably emit tool calls.)*
+
+---
+**Tip for your thinking:** Look closely at how each part of the agent harness acts as a safeguard against the underlying probabilistic and stateless nature of the LLM. How does separating the stopping condition or wrapping execution in a sandbox mitigate these inherent model flaws?
+
+--- trace ---
+[tool call]   search_hybrid({'query': 'model properties Lecture 02 design assumptions agents Lecture 03'})
+[tool return] search_hybrid -> {"results": [{"page_id": "lec03-main-p003", "document_id": "lec03-main", "lecture": 3, "document_title": "AI Agents", "s…
+  Pages returned: results: lec03-main-p003, lec02-main-p062, lec02-main-p029, lec03-main-p004, lec02-main-p003, lec03-main-p059, lec03-main-p006
+[time] Answer completed in 7.47 seconds (including retrieval and embedding)
+[usage] Input 3,276 tokens / Output 461 tokens / Model responses 2
+[cost] Estimated generation API cost: $0.002135 USD (excludes embedding and index construction)

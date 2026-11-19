@@ -2,4 +2,17 @@ $ uv run python -m app.agent --trace --full-context "In Lecture 02, what does Lo
 
 [model] gemini-3.5-flash-lite
 [full-context] Input: 369,491 characters
-[full-context] API error HTTP 503: {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+To answer your question based on the course materials:
+
+* **What LoRA freezes and trains:** 
+  In LoRA, the original weights of the model are frozen and not trained. Instead, it trains only small added matrices (adapters) represented by two thin matrices $A$ and $B$ (low-rank representation) [Lecture 2 · translated PDF p.75, Japanese source p.52].
+
+* **What QLoRA adds:** 
+  QLoRA builds upon LoRA by also compressing the original weights of the foundation model to **4 bits** (using coarse numerical representation like NF4) to further save memory. The adapters themselves are still trained at 16-bit precision [Lecture 2 · translated PDF p.75, Japanese source p.51, p.52, p.26]. 
+
+**Tip for thinking further:** Think about why freezing the main weights and training only a tiny fraction of parameters (often less than 1% of the total) makes it possible to adapt a large model on a modest GPU like a Colab T4 [Lecture 2 · translated PDF p.75].
+
+--- trace ---
+[time] Answer completed in 10.27 seconds (including retrieval and embedding)
+[usage] Input 95,824 tokens / Output 241 tokens / Model responses 1
+[cost] Estimated generation API cost: $0.029350 USD (excludes embedding and index construction)

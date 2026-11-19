@@ -1,0 +1,26 @@
+$ uv run python -m app.agent --trace  "Why does Lecture 02 say a model cannot answer questions about this year's course schedule, and which chatbot example in Lecture 01 solves this?"
+
+[model] gemini-3.5-flash-lite
+[search] RAG_TOP_K=5
+To understand why a foundation model may struggle with questions about specific or up-to-date schedules (like a current course schedule or new information announced this year), think about how models generate text and handle knowledge:
+
+* **Probabilistic Generation & Knowledge Cutoffs:** Lecture 2 notes that foundation models select next words probabilistically and have a knowledge cutoff. When asked about things outside their training data or specific current materials (such as specific course schedules or assignments), they do not necessarily answer "I don't know"; instead, they tend to generate plausible-sounding answers (hallucinations) that fit the context of the question (Lecture 2, p. 14, p. 27). 
+* **The Role of Context / Information Limits:** As Lecture 2 also points out, simply letting a model "think more" (increasing inference-time compute) cannot produce information it does not possess (Lecture 2, p. 27).
+
+To solve this limitation, Lecture 1 introduces an example chatbot that relies on external information rather than relying purely on the model's internal memory:
+
+* **RAG (Retrieval-Augmented Generation):** Lecture 1 discusses an example chatbot designed to handle lecture questions by using **RAG** (search, then answer). It searches the specific lecture materials/indices first and then has the LLM generate an answer directly based on the retrieved source documents (Lecture 1, p. 49).
+
+--- trace ---
+[tool call]   search_materials({'query': "this year's course schedule Lecture 02"})
+[tool return] search_materials -> {"results": [{"page_id": "lec02-main-p063", "document_id": "lec02-main", "lecture": 2, "document_title": "Fundamentals o…
+  Pages returned: results: lec02-main-p063, lec01-main-p060, lec01-main-p058, lec01-main-p057, lec01-main-p029
+[tool call]   search_materials({'query': 'course schedule model cannot answer Lecture 02'})
+[tool return] search_materials -> {"results": [{"page_id": "lec02-main-p003", "document_id": "lec02-main", "lecture": 2, "document_title": "Fundamentals o…
+  Pages returned: results: lec02-main-p003, lec02-main-p014, lec02-main-p063, lec02-main-p019, lec02-main-p027
+[tool call]   search_materials({'query': 'chatbot example Lecture 01'})
+[tool return] search_materials -> {"results": [{"page_id": "lec01-main-p049", "document_id": "lec01-main", "lecture": 1, "document_title": "Introduction t…
+  Pages returned: results: lec01-main-p049, lec01-main-p036, lec02-main-p003, lec01-main-p038, lec01-main-p039
+[time] Answer completed in 9.48 seconds (including retrieval and embedding)
+[usage] Input 9,031 tokens / Output 370 tokens / Model responses 4
+[cost] Estimated generation API cost: $0.003634 USD (excludes embedding and index construction)

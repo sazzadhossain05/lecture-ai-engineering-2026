@@ -1,0 +1,673 @@
+[
+ {
+  "method": "Vector search, top 5 (provided)",
+  "question": "t1_rsi",
+  "pages": [
+   "lec03-main-p055",
+   "lec03-main-p058",
+   "lec03-main-p054",
+   "lec01-main-p010",
+   "lec03-main-p021"
+  ],
+  "found": [
+   "lec01-main-p010",
+   "lec03-main-p055"
+  ],
+  "evidence": [
+   "lec01-main-p010",
+   "lec03-main-p055"
+  ],
+  "characters": 2820
+ },
+ {
+  "method": "Vector search, top 5 (provided)",
+  "question": "t2_errors",
+  "pages": [
+   "lec03-main-p019",
+   "lec03-main-p018",
+   "lec03-main-p046",
+   "lec03-main-p003",
+   "lec03-main-p054"
+  ],
+  "found": [
+   "lec03-main-p019"
+  ],
+  "evidence": [
+   "lec03-main-p019",
+   "lec01-main-p009"
+  ],
+  "characters": 3212
+ },
+ {
+  "method": "Vector search, top 5 (provided)",
+  "question": "t3_schedule",
+  "pages": [
+   "lec02-main-p003",
+   "lec02-main-p022",
+   "lec02-main-p014",
+   "lec02-main-p027",
+   "lec02-main-p053"
+  ],
+  "found": [
+   "lec02-main-p022"
+  ],
+  "evidence": [
+   "lec02-main-p022",
+   "lec01-main-p049"
+  ],
+  "characters": 4535
+ },
+ {
+  "method": "Vector search, top 10 (Basic)",
+  "question": "t1_rsi",
+  "pages": [
+   "lec03-main-p055",
+   "lec03-main-p058",
+   "lec03-main-p054",
+   "lec01-main-p010",
+   "lec03-main-p021",
+   "lec03-main-p057",
+   "lec03-main-p069",
+   "lec03-main-p020",
+   "lec02-main-p029",
+   "lec03-main-p004"
+  ],
+  "found": [
+   "lec01-main-p010",
+   "lec03-main-p055"
+  ],
+  "evidence": [
+   "lec01-main-p010",
+   "lec03-main-p055"
+  ],
+  "characters": 7393
+ },
+ {
+  "method": "Vector search, top 10 (Basic)",
+  "question": "t2_errors",
+  "pages": [
+   "lec03-main-p019",
+   "lec03-main-p018",
+   "lec03-main-p046",
+   "lec03-main-p003",
+   "lec03-main-p054",
+   "lec03-main-p020",
+   "lec03-main-p045",
+   "lec02-main-p017",
+   "lec03-main-p004",
+   "lec02-main-p062"
+  ],
+  "found": [
+   "lec03-main-p019"
+  ],
+  "evidence": [
+   "lec03-main-p019",
+   "lec01-main-p009"
+  ],
+  "characters": 7360
+ },
+ {
+  "method": "Vector search, top 10 (Basic)",
+  "question": "t3_schedule",
+  "pages": [
+   "lec02-main-p003",
+   "lec02-main-p022",
+   "lec02-main-p014",
+   "lec02-main-p027",
+   "lec02-main-p053",
+   "lec02-main-p019",
+   "lec02-main-p005",
+   "lec02-main-p015",
+   "lec01-main-p019",
+   "lec02-main-p026"
+  ],
+  "found": [
+   "lec02-main-p022"
+  ],
+  "evidence": [
+   "lec02-main-p022",
+   "lec01-main-p049"
+  ],
+  "characters": 9529
+ },
+ {
+  "method": "Vector top 5 + adjacent pages (Implementation)",
+  "question": "t1_rsi",
+  "pages": [
+   "lec03-main-p055",
+   "lec03-main-p056",
+   "lec03-main-p057",
+   "lec03-main-p058",
+   "lec03-main-p059",
+   "lec03-main-p053",
+   "lec03-main-p054",
+   "lec01-main-p009",
+   "lec01-main-p010",
+   "lec01-main-p011",
+   "lec03-main-p020",
+   "lec03-main-p021",
+   "lec03-main-p022"
+  ],
+  "found": [
+   "lec01-main-p010",
+   "lec03-main-p055"
+  ],
+  "evidence": [
+   "lec01-main-p010",
+   "lec03-main-p055"
+  ],
+  "characters": 8512
+ },
+ {
+  "method": "Vector top 5 + adjacent pages (Implementation)",
+  "question": "t2_errors",
+  "pages": [
+   "lec03-main-p019",
+   "lec03-main-p020",
+   "lec03-main-p017",
+   "lec03-main-p018",
+   "lec03-main-p045",
+   "lec03-main-p046",
+   "lec03-main-p047",
+   "lec03-main-p002",
+   "lec03-main-p003",
+   "lec03-main-p004",
+   "lec03-main-p053",
+   "lec03-main-p054",
+   "lec03-main-p055"
+  ],
+  "found": [
+   "lec03-main-p019"
+  ],
+  "evidence": [
+   "lec03-main-p019",
+   "lec01-main-p009"
+  ],
+  "characters": 8129
+ },
+ {
+  "method": "Vector top 5 + adjacent pages (Implementation)",
+  "question": "t3_schedule",
+  "pages": [
+   "lec02-main-p002",
+   "lec02-main-p003",
+   "lec02-main-p004",
+   "lec02-main-p021",
+   "lec02-main-p022",
+   "lec02-main-p023",
+   "lec02-main-p013",
+   "lec02-main-p014",
+   "lec02-main-p015",
+   "lec02-main-p026",
+   "lec02-main-p027",
+   "lec02-main-p028",
+   "lec02-main-p052",
+   "lec02-main-p053",
+   "lec02-main-p054"
+  ],
+  "found": [
+   "lec02-main-p022"
+  ],
+  "evidence": [
+   "lec02-main-p022",
+   "lec01-main-p049"
+  ],
+  "characters": 15068
+ },
+ {
+  "method": "Graph (provided)",
+  "question": "t1_rsi",
+  "pages": [
+   "lec03-main-p055",
+   "lec03-main-p058",
+   "lec03-main-p054",
+   "lec03-main-p056",
+   "lec03-main-p057",
+   "lec03-main-p059",
+   "lec03-main-p053",
+   "lec03-main-p060",
+   "lec03-main-p052",
+   "lec01-main-p046"
+  ],
+  "found": [
+   "lec03-main-p055"
+  ],
+  "evidence": [
+   "lec01-main-p010",
+   "lec03-main-p055"
+  ],
+  "characters": 6076
+ },
+ {
+  "method": "Graph (provided)",
+  "question": "t2_errors",
+  "pages": [
+   "lec03-main-p019",
+   "lec03-main-p018",
+   "lec03-main-p046",
+   "lec03-main-p020",
+   "lec03-main-p017",
+   "lec03-main-p045",
+   "lec03-main-p047",
+   "lec03-main-p021",
+   "lec03-main-p016",
+   "lec03-main-p044"
+  ],
+  "found": [
+   "lec03-main-p019"
+  ],
+  "evidence": [
+   "lec03-main-p019",
+   "lec01-main-p009"
+  ],
+  "characters": 7296
+ },
+ {
+  "method": "Graph (provided)",
+  "question": "t3_schedule",
+  "pages": [
+   "lec02-main-p003",
+   "lec02-main-p022",
+   "lec02-main-p014",
+   "lec02-main-p002",
+   "lec02-main-p004",
+   "lec02-main-p021",
+   "lec02-main-p023",
+   "lec02-main-p013",
+   "lec02-main-p015",
+   "lec02-main-p001"
+  ],
+  "found": [
+   "lec02-main-p022"
+  ],
+  "evidence": [
+   "lec02-main-p022",
+   "lec01-main-p049"
+  ],
+  "characters": 9268
+ },
+ {
+  "method": "Hybrid (Advanced)",
+  "question": "t1_rsi",
+  "pages": [
+   "lec03-main-p055",
+   "lec03-main-p058",
+   "lec01-main-p010",
+   "lec03-main-p021",
+   "lec03-main-p057",
+   "lec03-main-p069",
+   "lec03-main-p020"
+  ],
+  "found": [
+   "lec01-main-p010",
+   "lec03-main-p055"
+  ],
+  "evidence": [
+   "lec01-main-p010",
+   "lec03-main-p055"
+  ],
+  "characters": 5758
+ },
+ {
+  "method": "Hybrid (Advanced)",
+  "question": "t2_errors",
+  "pages": [
+   "lec03-main-p019",
+   "lec03-main-p046",
+   "lec03-main-p003",
+   "lec03-main-p020",
+   "lec03-main-p045",
+   "lec02-main-p017",
+   "lec01-main-p041"
+  ],
+  "found": [
+   "lec03-main-p019"
+  ],
+  "evidence": [
+   "lec03-main-p019",
+   "lec01-main-p009"
+  ],
+  "characters": 6134
+ },
+ {
+  "method": "Hybrid (Advanced)",
+  "question": "t3_schedule",
+  "pages": [
+   "lec02-main-p003",
+   "lec02-main-p022",
+   "lec02-main-p014",
+   "lec02-main-p027",
+   "lec02-main-p053",
+   "lec02-main-p019",
+   "lec01-main-p019"
+  ],
+  "found": [
+   "lec02-main-p022"
+  ],
+  "evidence": [
+   "lec02-main-p022",
+   "lec01-main-p049"
+  ],
+  "characters": 6745
+ },
+ {
+  "method": "Hybrid without the divider-page filter",
+  "question": "t1_rsi",
+  "pages": [
+   "lec03-main-p055",
+   "lec03-main-p058",
+   "lec03-main-p054",
+   "lec01-main-p010",
+   "lec03-main-p021",
+   "lec03-main-p057",
+   "lec03-main-p069"
+  ],
+  "found": [
+   "lec01-main-p010",
+   "lec03-main-p055"
+  ],
+  "evidence": [
+   "lec01-main-p010",
+   "lec03-main-p055"
+  ],
+  "characters": 4858
+ },
+ {
+  "method": "Hybrid without the divider-page filter",
+  "question": "t2_errors",
+  "pages": [
+   "lec03-main-p019",
+   "lec03-main-p018",
+   "lec03-main-p046",
+   "lec03-main-p003",
+   "lec03-main-p054",
+   "lec03-main-p020",
+   "lec01-main-p041"
+  ],
+  "found": [
+   "lec03-main-p019"
+  ],
+  "evidence": [
+   "lec03-main-p019",
+   "lec01-main-p009"
+  ],
+  "characters": 4952
+ },
+ {
+  "method": "Hybrid without the divider-page filter",
+  "question": "t3_schedule",
+  "pages": [
+   "lec02-main-p003",
+   "lec02-main-p022",
+   "lec02-main-p014",
+   "lec02-main-p027",
+   "lec02-main-p053",
+   "lec02-main-p019",
+   "lec01-main-p019"
+  ],
+  "found": [
+   "lec02-main-p022"
+  ],
+  "evidence": [
+   "lec02-main-p022",
+   "lec01-main-p049"
+  ],
+  "characters": 6745
+ },
+ {
+  "method": "Hybrid without keeping a page per named lecture",
+  "question": "t1_rsi",
+  "pages": [
+   "lec03-main-p055",
+   "lec03-main-p058",
+   "lec01-main-p010",
+   "lec03-main-p021",
+   "lec03-main-p057",
+   "lec03-main-p069",
+   "lec03-main-p020"
+  ],
+  "found": [
+   "lec01-main-p010",
+   "lec03-main-p055"
+  ],
+  "evidence": [
+   "lec01-main-p010",
+   "lec03-main-p055"
+  ],
+  "characters": 5758
+ },
+ {
+  "method": "Hybrid without keeping a page per named lecture",
+  "question": "t2_errors",
+  "pages": [
+   "lec03-main-p019",
+   "lec03-main-p046",
+   "lec03-main-p003",
+   "lec03-main-p020",
+   "lec03-main-p045",
+   "lec02-main-p017",
+   "lec03-main-p004"
+  ],
+  "found": [
+   "lec03-main-p019"
+  ],
+  "evidence": [
+   "lec03-main-p019",
+   "lec01-main-p009"
+  ],
+  "characters": 6075
+ },
+ {
+  "method": "Hybrid without keeping a page per named lecture",
+  "question": "t3_schedule",
+  "pages": [
+   "lec02-main-p003",
+   "lec02-main-p022",
+   "lec02-main-p014",
+   "lec02-main-p027",
+   "lec02-main-p053",
+   "lec02-main-p019",
+   "lec02-main-p005"
+  ],
+  "found": [
+   "lec02-main-p022"
+  ],
+  "evidence": [
+   "lec02-main-p022",
+   "lec01-main-p049"
+  ],
+  "characters": 5671
+ },
+ {
+  "method": "Hybrid without the question-term bonus",
+  "question": "t1_rsi",
+  "pages": [
+   "lec03-main-p055",
+   "lec03-main-p058",
+   "lec01-main-p010",
+   "lec03-main-p021",
+   "lec03-main-p057",
+   "lec03-main-p069",
+   "lec03-main-p020"
+  ],
+  "found": [
+   "lec01-main-p010",
+   "lec03-main-p055"
+  ],
+  "evidence": [
+   "lec01-main-p010",
+   "lec03-main-p055"
+  ],
+  "characters": 5758
+ },
+ {
+  "method": "Hybrid without the question-term bonus",
+  "question": "t2_errors",
+  "pages": [
+   "lec03-main-p019",
+   "lec03-main-p046",
+   "lec03-main-p003",
+   "lec03-main-p020",
+   "lec03-main-p045",
+   "lec02-main-p017",
+   "lec01-main-p041"
+  ],
+  "found": [
+   "lec03-main-p019"
+  ],
+  "evidence": [
+   "lec03-main-p019",
+   "lec01-main-p009"
+  ],
+  "characters": 6134
+ },
+ {
+  "method": "Hybrid without the question-term bonus",
+  "question": "t3_schedule",
+  "pages": [
+   "lec02-main-p003",
+   "lec02-main-p022",
+   "lec02-main-p014",
+   "lec02-main-p027",
+   "lec02-main-p053",
+   "lec02-main-p019",
+   "lec01-main-p019"
+  ],
+  "found": [
+   "lec02-main-p022"
+  ],
+  "evidence": [
+   "lec02-main-p022",
+   "lec01-main-p049"
+  ],
+  "characters": 6745
+ },
+ {
+  "method": "Hybrid without the per-section cap",
+  "question": "t1_rsi",
+  "pages": [
+   "lec03-main-p055",
+   "lec03-main-p058",
+   "lec01-main-p010",
+   "lec03-main-p021",
+   "lec03-main-p057",
+   "lec03-main-p069",
+   "lec03-main-p020"
+  ],
+  "found": [
+   "lec01-main-p010",
+   "lec03-main-p055"
+  ],
+  "evidence": [
+   "lec01-main-p010",
+   "lec03-main-p055"
+  ],
+  "characters": 5758
+ },
+ {
+  "method": "Hybrid without the per-section cap",
+  "question": "t2_errors",
+  "pages": [
+   "lec03-main-p019",
+   "lec03-main-p046",
+   "lec03-main-p003",
+   "lec03-main-p020",
+   "lec03-main-p045",
+   "lec02-main-p017",
+   "lec01-main-p041"
+  ],
+  "found": [
+   "lec03-main-p019"
+  ],
+  "evidence": [
+   "lec03-main-p019",
+   "lec01-main-p009"
+  ],
+  "characters": 6134
+ },
+ {
+  "method": "Hybrid without the per-section cap",
+  "question": "t3_schedule",
+  "pages": [
+   "lec02-main-p003",
+   "lec02-main-p022",
+   "lec02-main-p014",
+   "lec02-main-p027",
+   "lec02-main-p053",
+   "lec02-main-p019",
+   "lec01-main-p019"
+  ],
+  "found": [
+   "lec02-main-p022"
+  ],
+  "evidence": [
+   "lec02-main-p022",
+   "lec01-main-p049"
+  ],
+  "characters": 6745
+ },
+ {
+  "method": "Vector search, top 7 (same page count as hybrid)",
+  "question": "t1_rsi",
+  "pages": [
+   "lec03-main-p055",
+   "lec03-main-p058",
+   "lec03-main-p054",
+   "lec01-main-p010",
+   "lec03-main-p021",
+   "lec03-main-p057",
+   "lec03-main-p069"
+  ],
+  "found": [
+   "lec01-main-p010",
+   "lec03-main-p055"
+  ],
+  "evidence": [
+   "lec01-main-p010",
+   "lec03-main-p055"
+  ],
+  "characters": 4858
+ },
+ {
+  "method": "Vector search, top 7 (same page count as hybrid)",
+  "question": "t2_errors",
+  "pages": [
+   "lec03-main-p019",
+   "lec03-main-p018",
+   "lec03-main-p046",
+   "lec03-main-p003",
+   "lec03-main-p054",
+   "lec03-main-p020",
+   "lec03-main-p045"
+  ],
+  "found": [
+   "lec03-main-p019"
+  ],
+  "evidence": [
+   "lec03-main-p019",
+   "lec01-main-p009"
+  ],
+  "characters": 4726
+ },
+ {
+  "method": "Vector search, top 7 (same page count as hybrid)",
+  "question": "t3_schedule",
+  "pages": [
+   "lec02-main-p003",
+   "lec02-main-p022",
+   "lec02-main-p014",
+   "lec02-main-p027",
+   "lec02-main-p053",
+   "lec02-main-p019",
+   "lec02-main-p005"
+  ],
+  "found": [
+   "lec02-main-p022"
+  ],
+  "evidence": [
+   "lec02-main-p022",
+   "lec01-main-p049"
+  ],
+  "characters": 5671
+ }
+]

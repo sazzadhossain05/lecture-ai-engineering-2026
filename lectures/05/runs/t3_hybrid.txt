@@ -1,0 +1,25 @@
+$ uv run python -m app.agent --trace --hybrid "Why does Lecture 02 say a model cannot answer questions about this year's course schedule, and which chatbot example in Lecture 01 solves this?"
+
+[model] gemini-3.5-flash-lite
+[search] RAG_TOP_K=5
+Based on the lecture materials:
+
+* **Why a model cannot answer about this year's course schedule:** 
+  Lecture 02 explains that a foundation model has a **knowledge cutoff** because it only knows facts up to the time its training data was collected (which occurs months or even years before it is actually used). Consequently, it does not inherently know current, time-sensitive details such as this year's syllabus, deadlines, or schedules unless external information is provided (Lecture 2, p. 22).
+
+* **Which chatbot example in Lecture 01 solves this:** 
+  Lecture 01 introduces the example of a **chatbot that answers questions during lectures using RAG (Retrieval-Augmented Generation)** (Lecture 1, pp. 19, 49). By searching through up-to-date lecture materials and providing the relevant retrieved documents as context alongside the user's question, RAG bridges the gap left by the model's knowledge cutoff.
+
+--- trace ---
+[tool call]   search_hybrid({'query': 'Lecture 02 model course schedule year'})
+[tool return] search_hybrid -> {"results": [{"page_id": "lec02-main-p063", "document_id": "lec02-main", "lecture": 2, "document_title": "Fundamentals o…
+  Pages returned: results: lec02-main-p063, lec01-main-p060, lec02-main-p001, lec02-main-p002, lec02-main-p029, lec02-main-p061, lec01-main-p058
+[tool call]   search_hybrid({'query': 'chatbot schedule cutoff training data lecture 1 lecture 2'})
+[tool return] search_hybrid -> {"results": [{"page_id": "lec02-main-p022", "document_id": "lec02-main", "lecture": 2, "document_title": "Fundamentals o…
+  Pages returned: results: lec02-main-p022, lec02-main-p003, lec02-main-p019, lec02-main-p054, lec02-main-p002, lec02-main-p015, lec01-main-p058
+[tool call]   search_hybrid({'query': 'Lecture 1 chatbot example course schedule'})
+[tool return] search_hybrid -> {"results": [{"page_id": "lec01-main-p036", "document_id": "lec01-main", "lecture": 1, "document_title": "Introduction t…
+  Pages returned: results: lec01-main-p036, lec01-main-p049, lec01-main-p039, lec01-main-p019, lec01-main-p062, lec01-main-p038, lec02-main-p003
+[time] Answer completed in 7.44 seconds (including retrieval and embedding)
+[usage] Input 16,429 tokens / Output 277 tokens / Model responses 4
+[cost] Estimated generation API cost: $0.004525 USD (excludes embedding and index construction)
