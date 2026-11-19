@@ -19,7 +19,17 @@ RAG_TREE = ROOT / "data/rag_data/tree.json"
 RAG_GRAPH = ROOT / "data/rag_data/graph.json"
 RAG_DB = Path(os.getenv("AIE_RAG_DB", str(ROOT / "data/rag_data/index.sqlite3")))
 RAG_DOCUMENT_IDS = ("lec01-main", "lec02-main", "lec03-main")
-RAG_TOP_K = 5
+# Homework (Basic): the number of pages returned by vector search. The default stays 5; set
+# AIE_RAG_TOP_K (for example, AIE_RAG_TOP_K=10) to compare result counts without editing this file.
+RAG_TOP_K = int(os.getenv("AIE_RAG_TOP_K", "5"))
+# Homework (Implementation): also return this many pages before and after each search hit (same document only).
+RAG_NEIGHBOR_WINDOW = 1
+# Homework (Advanced): question-aware hybrid retrieval = vector search + lecture/section structure + course-term graph.
+HYBRID_MAX_PAGES = 7         # pages returned to the model
+HYBRID_MAX_PER_SECTION = 4   # keep at least 3 places for evidence from other sections and lectures
+HYBRID_MIN_CHARS = 150       # shorter pages are section dividers that hold only a title
+HYBRID_MAX_TERM_PAGES = 30   # ignore very common terms (for example "AI agent", 54 pages): they match almost everything
+HYBRID_TERM_BONUS = 0.01     # score bonus per course term from the question that a page mentions (at most 2 count)
 GRAPH_START_K = 3
 GRAPH_HOPS = 2
 GRAPH_MAX_RESULTS = 10

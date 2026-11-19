@@ -97,6 +97,43 @@ def search_materials(query: str) -> str:
         return json.dumps({"error": api_error_message(e.code), "results": []}, ensure_ascii=False)
 
 
+def search_materials_with_neighbors(query: str) -> str:
+    """Search the main materials for Lectures 01–03 and return relevant pages plus the page just before and after each one.
+
+    Use query to specify what you want to look up. Pages with role "neighbor" were added because they sit next to a hit
+    (see neighbor_of); they may continue the explanation or may be unrelated, so check their text.
+    """
+    from google.genai.errors import APIError
+    import sqlite3
+    from app.retrieval import search_with_neighbors
+
+    try:
+        return json.dumps({"results": search_with_neighbors(query)}, ensure_ascii=False)
+    except (ValueError, FileNotFoundError, sqlite3.Error) as e:
+        return json.dumps({"error": str(e), "results": []}, ensure_ascii=False)
+    except APIError as e:
+        return json.dumps({"error": api_error_message(e.code), "results": []}, ensure_ascii=False)
+
+
+def search_hybrid(query: str) -> str:
+    """Search the main materials for Lectures 01–03 and return up to 7 relevant pages, chosen across sections.
+
+    Combines vector search with links between pages (the next page, shared course terms), then keeps the pages
+    closest to the question. `why` tells you how each page was found. Use query to specify what you want to look up;
+    for questions that combine topics, search each topic separately.
+    """
+    from google.genai.errors import APIError
+    import sqlite3
+    from app.retrieval import search_hybrid as search
+
+    try:
+        return json.dumps(search(query), ensure_ascii=False)
+    except (ValueError, OSError, sqlite3.Error) as e:
+        return json.dumps({"error": str(e), "results": []}, ensure_ascii=False)
+    except APIError as e:
+        return json.dumps({"error": api_error_message(e.code), "results": []}, ensure_ascii=False)
+
+
 def browse_tree(node_id: str | None = None) -> str:
     """Return the table of contents and the first sentence of each page. Specify a page ID to get its full text.
 
