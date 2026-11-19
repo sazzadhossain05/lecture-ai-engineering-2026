@@ -1,0 +1,28 @@
+$ uv run python -m app.agent --trace  "What are the three ways to stop an agent loop, and who should decide whether the task is done?"
+
+[model] gemini-3.5-flash-lite
+[search] RAG_TOP_K=5
+Based on Lecture 3, here are the details regarding stopping an agent loop and deciding when a task is done:
+
+### 1. Three Ways to Stop an Agent Loop
+According to the lecture materials, the three ways to stop the loop are:
+1. **Model:** Ends when it stops calling tools or when its output ends (though relying solely on the model may cause it to stop too early or never stop) (Lecture 3, p. 43).
+2. **Harness:** Stops at a set limit managed by the harness (such as repeated failures, or time/budget exceeded), rather than relying on the model to self-report (Lecture 3, p. 43).
+3. **Human / monitor:** Stops from the outside (for example, a person pressing a stop button), as the agent cannot turn itself off (Lecture 3, p. 43).
+
+---
+
+### 2. Who Should Decide Whether the Task Is Done?
+The materials emphasize that **someone other than the working model** should decide if a task is actually done (Lecture 3, p. 44). Relying solely on the working model can be problematic. Instead, you can use:
+- **A separate judge model:** (e.g., a separate small model that evaluates every turn to determine if the goal has been met, marked as a failure, or needs to continue) (Lecture 3, p. 44).
+- **A fixed evaluation script:** (e.g., an automated test script that the agent cannot modify, which checks the validity of the work) (Lecture 3, p. 44).
+
+Think about how relying on the worker model alone to judge its own success could lead to loops getting stuck or false positives. Why might having an independent judge or script be a safer design choice for an autonomous agent?
+
+--- trace ---
+[tool call]   search_materials({'query': 'stop agent loop three ways task is done'})
+[tool return] search_materials -> {"results": [{"page_id": "lec03-main-p043", "document_id": "lec03-main", "lecture": 3, "document_title": "AI Agents", "s…
+  Pages returned: results: lec03-main-p043, lec03-main-p044, lec03-main-p042, lec03-main-p048, lec03-main-p026
+[time] Answer completed in 27.93 seconds (including retrieval and embedding)
+[usage] Input 2,127 tokens / Output 411 tokens / Model responses 2
+[cost] Estimated generation API cost: $0.001666 USD (excludes embedding and index construction)

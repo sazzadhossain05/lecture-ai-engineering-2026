@@ -1,0 +1,21 @@
+$ AIE_RAG_TOP_K=10 uv run python -m app.agent --trace  "In the Lecture 03 examples, how does compaction differ from memory across sessions? Do all daily notes go into long-term memory?"
+
+[model] gemini-3.5-flash-lite
+[search] RAG_TOP_K=10
+Based on the Lecture 3 materials (specifically Part 6 on memory), here is how compaction and memory differ, along with how daily notes are handled:
+
+* **Compaction vs. Memory Across Sessions:**
+  * **Compaction** works *within a session* (inside the current context) by summarizing history to fit within context limits, replacing old history with a summary (Lecture 3, p. 39, 65).
+  * **Memory** operates *across sessions* using external storage (such as files or a memory tool) where information is written out and loaded back into the next context (Lecture 3, p. 13, 39, 65).
+
+* **Do all daily notes go into long-term memory?**
+  * No. In the OpenClaw example, a nightly review process (or "dreaming") evaluates the daily notes (`memory/<date>.md`) by dropping duplicates, finding recurring themes, and moving *only* what passes the threshold into long-term memory (`MEMORY.md`) (Lecture 3, p. 40). 
+  * As the materials note, one-off lookups stay only in daily notes so that long-term memory does not bloat (Lecture 3, p. 40).
+
+--- trace ---
+[tool call]   search_materials({'query': 'compaction memory sessions daily notes long-term memory'})
+[tool return] search_materials -> {"results": [{"page_id": "lec03-main-p065", "document_id": "lec03-main", "lecture": 3, "document_title": "AI Agents", "s…
+  Pages returned: results: lec03-main-p065, lec03-main-p038, lec03-main-p039, lec03-main-p040, lec03-main-p013, lec03-main-p041, lec03-main-p037, lec03-main-p064, lec02-main-p046, lec02-main-p015
+[time] Answer completed in 51.33 seconds (including retrieval and embedding)
+[usage] Input 4,000 tokens / Output 296 tokens / Model responses 2
+[cost] Estimated generation API cost: $0.001940 USD (excludes embedding and index construction)

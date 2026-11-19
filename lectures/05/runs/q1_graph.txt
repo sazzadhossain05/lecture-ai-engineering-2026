@@ -1,0 +1,17 @@
+$ uv run python -m app.agent --trace --graph "In Lecture 02, what does LoRA freeze and what does it train? What does QLoRA add?"
+
+[model] gemini-3.5-flash-lite
+[search] RAG_TOP_K=5
+Based on Lecture 02 (pages 51–52), here is how LoRA and QLoRA handle model weights:
+
+* **What LoRA freezes:** The original base model weights ($W$), keeping them untouched (frozen) during training [lec02-main-p052].
+* **What LoRA trains:** Only a small, low-rank change represented by two thin matrices (referred to as $A$ and $B$), which account for a tiny fraction of the parameters (often less than 1%) [lec02-main-p052].
+* **What QLoRA adds:** QLoRA adds **quantization/compression of the original weights down to 4 bits** (a coarser numerical representation) [lec02-main-p052]. This further reduces the memory footprint of the base model (e.g., down to about 4 GB for a 7B model), making it possible to adapt very large foundation models on a single standard GPU [lec02-main-p052].
+
+--- trace ---
+[tool call]   search_graph({'query': 'LoRA freeze train QLoRA Lecture 02'})
+[tool return] search_graph -> {"seeds": [{"page_id": "lec02-main-p052", "document_id": "lec02-main", "lecture": 2, "document_title": "Fundamentals of …
+  Pages returned: seeds: lec02-main-p052, lec02-main-p060, lec02-main-p051 | expanded: lec02-main-p053, lec02-main-p059, lec02-main-p061, lec02-main-p050, lec02-main-p062, lec02-main-p049, lec02-main-p047
+[time] Answer completed in 44.88 seconds (including retrieval and embedding)
+[usage] Input 5,188 tokens / Output 250 tokens / Model responses 2
+[cost] Estimated generation API cost: $0.002181 USD (excludes embedding and index construction)

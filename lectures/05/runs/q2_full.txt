@@ -1,0 +1,17 @@
+$ uv run python -m app.agent --trace --full-context "In the Lecture 03 examples, how does compaction differ from memory across sessions? Do all daily notes go into long-term memory?"
+
+[model] gemini-3.5-flash-lite
+[full-context] Input: 369,538 characters
+To answer your questions based on the provided course materials:
+
+### 1. How compaction differs from memory across sessions
+* **Compaction** works within the context (the same session) by replacing old history with a summary to fit within finite context limits [lec03-main / AI Agents, p. 38, 39]. 
+* **Memory across sessions** (such as external storage, the memory tool, or auto memory) stores records externally—such as in files or databases—so that they can be loaded back at the start of a new session [lec03-main / AI Agents, p. 13, 39]. 
+
+### 2. Do all daily notes go into long-term memory?
+No, not all daily notes are kept. For example, in systems like OpenClaw, daily notes are reviewed nightly through an automated process (dreaming) where duplicates are dropped, recurring themes are compared, and only what passes a certain threshold is moved into long-term memory (`MEMORY.md`), ensuring that one-off lookups stay only in daily notes and do not bloat long-term memory [lec03-main / AI Agents, p. 40].
+
+--- trace ---
+[time] Answer completed in 24.18 seconds (including retrieval and embedding)
+[usage] Input 95,828 tokens / Output 254 tokens / Model responses 1
+[cost] Estimated generation API cost: $0.029383 USD (excludes embedding and index construction)

@@ -1,0 +1,1338 @@
+[
+ {
+  "method": "Vector search, top 5 (provided)",
+  "question": "q1_lora",
+  "pages": [
+   "lec02-main-p052",
+   "lec02-main-p051",
+   "lec02-main-p060",
+   "lec02-main-p061",
+   "lec02-main-p047"
+  ],
+  "found": [
+   "lec02-main-p052"
+  ],
+  "evidence": [
+   "lec02-main-p052"
+  ],
+  "characters": 5844
+ },
+ {
+  "method": "Vector search, top 5 (provided)",
+  "question": "q2_memory",
+  "pages": [
+   "lec03-main-p065",
+   "lec03-main-p039",
+   "lec03-main-p038",
+   "lec03-main-p040",
+   "lec03-main-p013"
+  ],
+  "found": [
+   "lec03-main-p013",
+   "lec03-main-p039",
+   "lec03-main-p040"
+  ],
+  "evidence": [
+   "lec03-main-p013",
+   "lec03-main-p039",
+   "lec03-main-p040"
+  ],
+  "characters": 3929
+ },
+ {
+  "method": "Vector search, top 5 (provided)",
+  "question": "q3_properties",
+  "pages": [
+   "lec03-main-p003",
+   "lec02-main-p062",
+   "lec03-main-p013",
+   "lec03-main-p004",
+   "lec03-main-p008"
+  ],
+  "found": [
+   "lec03-main-p003",
+   "lec02-main-p062"
+  ],
+  "evidence": [
+   "lec03-main-p003",
+   "lec02-main-p062"
+  ],
+  "characters": 3977
+ },
+ {
+  "method": "Vector search, top 5 (provided)",
+  "question": "q4_rag_vs_ft",
+  "pages": [
+   "lec01-main-p049",
+   "lec01-main-p019",
+   "lec02-main-p047",
+   "lec02-main-p053",
+   "lec02-main-p027"
+  ],
+  "found": [
+   "lec02-main-p047",
+   "lec01-main-p049"
+  ],
+  "evidence": [
+   "lec02-main-p046",
+   "lec02-main-p047",
+   "lec01-main-p049"
+  ],
+  "characters": 5666
+ },
+ {
+  "method": "Vector search, top 5 (provided)",
+  "question": "q5_stop",
+  "pages": [
+   "lec03-main-p043",
+   "lec03-main-p044",
+   "lec03-main-p026",
+   "lec03-main-p020",
+   "lec03-main-p042"
+  ],
+  "found": [
+   "lec03-main-p043",
+   "lec03-main-p044"
+  ],
+  "evidence": [
+   "lec03-main-p043",
+   "lec03-main-p044"
+  ],
+  "characters": 3488
+ },
+ {
+  "method": "Vector search, top 5 (provided)",
+  "question": "q6_absent",
+  "pages": [
+   "lec02-main-p013",
+   "lec02-main-p024",
+   "lec01-main-p049",
+   "lec01-main-p019",
+   "lec02-main-p003"
+  ],
+  "found": [],
+  "evidence": [],
+  "characters": 5757
+ },
+ {
+  "method": "Vector search, top 10 (Basic)",
+  "question": "q1_lora",
+  "pages": [
+   "lec02-main-p052",
+   "lec02-main-p051",
+   "lec02-main-p060",
+   "lec02-main-p061",
+   "lec02-main-p047",
+   "lec02-main-p024",
+   "lec02-main-p006",
+   "lec02-main-p054",
+   "lec02-main-p023",
+   "lec02-main-p053"
+  ],
+  "found": [
+   "lec02-main-p052"
+  ],
+  "evidence": [
+   "lec02-main-p052"
+  ],
+  "characters": 11428
+ },
+ {
+  "method": "Vector search, top 10 (Basic)",
+  "question": "q2_memory",
+  "pages": [
+   "lec03-main-p065",
+   "lec03-main-p039",
+   "lec03-main-p038",
+   "lec03-main-p040",
+   "lec03-main-p013",
+   "lec03-main-p041",
+   "lec03-main-p037",
+   "lec03-main-p008",
+   "lec02-main-p015",
+   "lec02-main-p046"
+  ],
+  "found": [
+   "lec03-main-p013",
+   "lec03-main-p039",
+   "lec03-main-p040"
+  ],
+  "evidence": [
+   "lec03-main-p013",
+   "lec03-main-p039",
+   "lec03-main-p040"
+  ],
+  "characters": 6948
+ },
+ {
+  "method": "Vector search, top 10 (Basic)",
+  "question": "q3_properties",
+  "pages": [
+   "lec03-main-p003",
+   "lec02-main-p062",
+   "lec03-main-p013",
+   "lec03-main-p004",
+   "lec03-main-p008",
+   "lec03-main-p048",
+   "lec03-main-p006",
+   "lec02-main-p029",
+   "lec03-main-p005",
+   "lec03-main-p068"
+  ],
+  "found": [
+   "lec03-main-p003",
+   "lec02-main-p062"
+  ],
+  "evidence": [
+   "lec03-main-p003",
+   "lec02-main-p062"
+  ],
+  "characters": 7586
+ },
+ {
+  "method": "Vector search, top 10 (Basic)",
+  "question": "q4_rag_vs_ft",
+  "pages": [
+   "lec01-main-p049",
+   "lec01-main-p019",
+   "lec02-main-p047",
+   "lec02-main-p053",
+   "lec02-main-p027",
+   "lec02-main-p046",
+   "lec02-main-p024",
+   "lec02-main-p003",
+   "lec02-main-p057",
+   "lec02-main-p013"
+  ],
+  "found": [
+   "lec02-main-p046",
+   "lec02-main-p047",
+   "lec01-main-p049"
+  ],
+  "evidence": [
+   "lec02-main-p046",
+   "lec02-main-p047",
+   "lec01-main-p049"
+  ],
+  "characters": 10048
+ },
+ {
+  "method": "Vector search, top 10 (Basic)",
+  "question": "q5_stop",
+  "pages": [
+   "lec03-main-p043",
+   "lec03-main-p044",
+   "lec03-main-p026",
+   "lec03-main-p020",
+   "lec03-main-p042",
+   "lec03-main-p048",
+   "lec03-main-p045",
+   "lec03-main-p046",
+   "lec03-main-p025",
+   "lec03-main-p047"
+  ],
+  "found": [
+   "lec03-main-p043",
+   "lec03-main-p044"
+  ],
+  "evidence": [
+   "lec03-main-p043",
+   "lec03-main-p044"
+  ],
+  "characters": 7362
+ },
+ {
+  "method": "Vector search, top 10 (Basic)",
+  "question": "q6_absent",
+  "pages": [
+   "lec02-main-p013",
+   "lec02-main-p024",
+   "lec01-main-p049",
+   "lec01-main-p019",
+   "lec02-main-p003",
+   "lec03-main-p064",
+   "lec02-main-p047",
+   "lec02-main-p027",
+   "lec03-main-p019",
+   "lec02-main-p057"
+  ],
+  "found": [],
+  "evidence": [],
+  "characters": 10971
+ },
+ {
+  "method": "Vector top 5 + adjacent pages (Implementation)",
+  "question": "q1_lora",
+  "pages": [
+   "lec02-main-p052",
+   "lec02-main-p053",
+   "lec02-main-p050",
+   "lec02-main-p051",
+   "lec02-main-p059",
+   "lec02-main-p060",
+   "lec02-main-p061",
+   "lec02-main-p062",
+   "lec02-main-p046",
+   "lec02-main-p047",
+   "lec02-main-p048"
+  ],
+  "found": [
+   "lec02-main-p052"
+  ],
+  "evidence": [
+   "lec02-main-p052"
+  ],
+  "characters": 11464
+ },
+ {
+  "method": "Vector top 5 + adjacent pages (Implementation)",
+  "question": "q2_memory",
+  "pages": [
+   "lec03-main-p064",
+   "lec03-main-p065",
+   "lec03-main-p066",
+   "lec03-main-p039",
+   "lec03-main-p037",
+   "lec03-main-p038",
+   "lec03-main-p040",
+   "lec03-main-p041",
+   "lec03-main-p012",
+   "lec03-main-p013",
+   "lec03-main-p014"
+  ],
+  "found": [
+   "lec03-main-p013",
+   "lec03-main-p039",
+   "lec03-main-p040"
+  ],
+  "evidence": [
+   "lec03-main-p013",
+   "lec03-main-p039",
+   "lec03-main-p040"
+  ],
+  "characters": 8084
+ },
+ {
+  "method": "Vector top 5 + adjacent pages (Implementation)",
+  "question": "q3_properties",
+  "pages": [
+   "lec03-main-p002",
+   "lec03-main-p003",
+   "lec02-main-p061",
+   "lec02-main-p062",
+   "lec02-main-p063",
+   "lec03-main-p012",
+   "lec03-main-p013",
+   "lec03-main-p014",
+   "lec03-main-p004",
+   "lec03-main-p005",
+   "lec03-main-p007",
+   "lec03-main-p008",
+   "lec03-main-p009"
+  ],
+  "found": [
+   "lec03-main-p003",
+   "lec02-main-p062"
+  ],
+  "evidence": [
+   "lec03-main-p003",
+   "lec02-main-p062"
+  ],
+  "characters": 7686
+ },
+ {
+  "method": "Vector top 5 + adjacent pages (Implementation)",
+  "question": "q4_rag_vs_ft",
+  "pages": [
+   "lec01-main-p048",
+   "lec01-main-p049",
+   "lec01-main-p050",
+   "lec01-main-p018",
+   "lec01-main-p019",
+   "lec01-main-p020",
+   "lec02-main-p046",
+   "lec02-main-p047",
+   "lec02-main-p048",
+   "lec02-main-p052",
+   "lec02-main-p053",
+   "lec02-main-p054",
+   "lec02-main-p026",
+   "lec02-main-p027",
+   "lec02-main-p028"
+  ],
+  "found": [
+   "lec02-main-p046",
+   "lec02-main-p047",
+   "lec01-main-p049"
+  ],
+  "evidence": [
+   "lec02-main-p046",
+   "lec02-main-p047",
+   "lec01-main-p049"
+  ],
+  "characters": 14230
+ },
+ {
+  "method": "Vector top 5 + adjacent pages (Implementation)",
+  "question": "q5_stop",
+  "pages": [
+   "lec03-main-p043",
+   "lec03-main-p044",
+   "lec03-main-p045",
+   "lec03-main-p025",
+   "lec03-main-p026",
+   "lec03-main-p027",
+   "lec03-main-p019",
+   "lec03-main-p020",
+   "lec03-main-p021",
+   "lec03-main-p041",
+   "lec03-main-p042"
+  ],
+  "found": [
+   "lec03-main-p043",
+   "lec03-main-p044"
+  ],
+  "evidence": [
+   "lec03-main-p043",
+   "lec03-main-p044"
+  ],
+  "characters": 8152
+ },
+ {
+  "method": "Vector top 5 + adjacent pages (Implementation)",
+  "question": "q6_absent",
+  "pages": [
+   "lec02-main-p012",
+   "lec02-main-p013",
+   "lec02-main-p014",
+   "lec02-main-p023",
+   "lec02-main-p024",
+   "lec02-main-p025",
+   "lec01-main-p048",
+   "lec01-main-p049",
+   "lec01-main-p050",
+   "lec01-main-p018",
+   "lec01-main-p019",
+   "lec01-main-p020",
+   "lec02-main-p002",
+   "lec02-main-p003",
+   "lec02-main-p004"
+  ],
+  "found": [],
+  "evidence": [],
+  "characters": 14688
+ },
+ {
+  "method": "Graph (provided)",
+  "question": "q1_lora",
+  "pages": [
+   "lec02-main-p052",
+   "lec02-main-p051",
+   "lec02-main-p060",
+   "lec02-main-p053",
+   "lec02-main-p050",
+   "lec02-main-p059",
+   "lec02-main-p061",
+   "lec02-main-p049",
+   "lec02-main-p062",
+   "lec02-main-p047"
+  ],
+  "found": [
+   "lec02-main-p052"
+  ],
+  "evidence": [
+   "lec02-main-p052"
+  ],
+  "characters": 11019
+ },
+ {
+  "method": "Graph (provided)",
+  "question": "q2_memory",
+  "pages": [
+   "lec03-main-p065",
+   "lec03-main-p039",
+   "lec03-main-p038",
+   "lec03-main-p064",
+   "lec03-main-p066",
+   "lec03-main-p040",
+   "lec03-main-p037",
+   "lec03-main-p063",
+   "lec03-main-p067",
+   "lec03-main-p041"
+  ],
+  "found": [
+   "lec03-main-p039",
+   "lec03-main-p040"
+  ],
+  "evidence": [
+   "lec03-main-p013",
+   "lec03-main-p039",
+   "lec03-main-p040"
+  ],
+  "characters": 9364
+ },
+ {
+  "method": "Graph (provided)",
+  "question": "q3_properties",
+  "pages": [
+   "lec03-main-p003",
+   "lec02-main-p062",
+   "lec03-main-p013",
+   "lec03-main-p002",
+   "lec03-main-p004",
+   "lec02-main-p061",
+   "lec02-main-p063",
+   "lec03-main-p012",
+   "lec03-main-p014",
+   "lec03-main-p001"
+  ],
+  "found": [
+   "lec03-main-p003",
+   "lec02-main-p062"
+  ],
+  "evidence": [
+   "lec03-main-p003",
+   "lec02-main-p062"
+  ],
+  "characters": 5993
+ },
+ {
+  "method": "Graph (provided)",
+  "question": "q4_rag_vs_ft",
+  "pages": [
+   "lec01-main-p049",
+   "lec01-main-p019",
+   "lec02-main-p047",
+   "lec01-main-p048",
+   "lec01-main-p050",
+   "lec01-main-p018",
+   "lec01-main-p020",
+   "lec02-main-p046",
+   "lec02-main-p048",
+   "lec01-main-p047"
+  ],
+  "found": [
+   "lec02-main-p046",
+   "lec02-main-p047",
+   "lec01-main-p049"
+  ],
+  "evidence": [
+   "lec02-main-p046",
+   "lec02-main-p047",
+   "lec01-main-p049"
+  ],
+  "characters": 8766
+ },
+ {
+  "method": "Graph (provided)",
+  "question": "q5_stop",
+  "pages": [
+   "lec03-main-p043",
+   "lec03-main-p044",
+   "lec03-main-p026",
+   "lec03-main-p042",
+   "lec03-main-p045",
+   "lec03-main-p025",
+   "lec03-main-p027",
+   "lec03-main-p041",
+   "lec03-main-p046",
+   "lec03-main-p024"
+  ],
+  "found": [
+   "lec03-main-p043",
+   "lec03-main-p044"
+  ],
+  "evidence": [
+   "lec03-main-p043",
+   "lec03-main-p044"
+  ],
+  "characters": 7318
+ },
+ {
+  "method": "Graph (provided)",
+  "question": "q6_absent",
+  "pages": [
+   "lec02-main-p013",
+   "lec02-main-p024",
+   "lec01-main-p049",
+   "lec02-main-p012",
+   "lec02-main-p014",
+   "lec02-main-p023",
+   "lec02-main-p025",
+   "lec01-main-p048",
+   "lec01-main-p050",
+   "lec02-main-p011"
+  ],
+  "found": [],
+  "evidence": [],
+  "characters": 10933
+ },
+ {
+  "method": "Hybrid (Advanced)",
+  "question": "q1_lora",
+  "pages": [
+   "lec02-main-p052",
+   "lec02-main-p051",
+   "lec02-main-p060",
+   "lec02-main-p061",
+   "lec02-main-p024",
+   "lec02-main-p006",
+   "lec02-main-p023"
+  ],
+  "found": [
+   "lec02-main-p052"
+  ],
+  "evidence": [
+   "lec02-main-p052"
+  ],
+  "characters": 7931
+ },
+ {
+  "method": "Hybrid (Advanced)",
+  "question": "q2_memory",
+  "pages": [
+   "lec03-main-p065",
+   "lec03-main-p039",
+   "lec03-main-p038",
+   "lec03-main-p040",
+   "lec03-main-p013",
+   "lec03-main-p041",
+   "lec03-main-p008"
+  ],
+  "found": [
+   "lec03-main-p013",
+   "lec03-main-p039",
+   "lec03-main-p040"
+  ],
+  "evidence": [
+   "lec03-main-p013",
+   "lec03-main-p039",
+   "lec03-main-p040"
+  ],
+  "characters": 5096
+ },
+ {
+  "method": "Hybrid (Advanced)",
+  "question": "q3_properties",
+  "pages": [
+   "lec03-main-p003",
+   "lec02-main-p062",
+   "lec03-main-p013",
+   "lec03-main-p004",
+   "lec03-main-p008",
+   "lec03-main-p048",
+   "lec03-main-p006"
+  ],
+  "found": [
+   "lec03-main-p003",
+   "lec02-main-p062"
+  ],
+  "evidence": [
+   "lec03-main-p003",
+   "lec02-main-p062"
+  ],
+  "characters": 5203
+ },
+ {
+  "method": "Hybrid (Advanced)",
+  "question": "q4_rag_vs_ft",
+  "pages": [
+   "lec01-main-p049",
+   "lec01-main-p019",
+   "lec02-main-p047",
+   "lec02-main-p053",
+   "lec02-main-p027",
+   "lec02-main-p046",
+   "lec02-main-p024"
+  ],
+  "found": [
+   "lec02-main-p046",
+   "lec02-main-p047",
+   "lec01-main-p049"
+  ],
+  "evidence": [
+   "lec02-main-p046",
+   "lec02-main-p047",
+   "lec01-main-p049"
+  ],
+  "characters": 7603
+ },
+ {
+  "method": "Hybrid (Advanced)",
+  "question": "q5_stop",
+  "pages": [
+   "lec03-main-p043",
+   "lec03-main-p044",
+   "lec03-main-p026",
+   "lec03-main-p020",
+   "lec03-main-p048",
+   "lec03-main-p045",
+   "lec03-main-p025"
+  ],
+  "found": [
+   "lec03-main-p043",
+   "lec03-main-p044"
+  ],
+  "evidence": [
+   "lec03-main-p043",
+   "lec03-main-p044"
+  ],
+  "characters": 5626
+ },
+ {
+  "method": "Hybrid (Advanced)",
+  "question": "q6_absent",
+  "pages": [
+   "lec02-main-p013",
+   "lec02-main-p024",
+   "lec01-main-p049",
+   "lec01-main-p019",
+   "lec02-main-p003",
+   "lec02-main-p047",
+   "lec02-main-p027"
+  ],
+  "found": [],
+  "evidence": [],
+  "characters": 7774
+ },
+ {
+  "method": "Hybrid without the divider-page filter",
+  "question": "q1_lora",
+  "pages": [
+   "lec02-main-p052",
+   "lec02-main-p051",
+   "lec02-main-p060",
+   "lec02-main-p061",
+   "lec02-main-p024",
+   "lec02-main-p006",
+   "lec02-main-p023"
+  ],
+  "found": [
+   "lec02-main-p052"
+  ],
+  "evidence": [
+   "lec02-main-p052"
+  ],
+  "characters": 7931
+ },
+ {
+  "method": "Hybrid without the divider-page filter",
+  "question": "q2_memory",
+  "pages": [
+   "lec03-main-p065",
+   "lec03-main-p039",
+   "lec03-main-p038",
+   "lec03-main-p040",
+   "lec03-main-p013",
+   "lec03-main-p041",
+   "lec03-main-p008"
+  ],
+  "found": [
+   "lec03-main-p013",
+   "lec03-main-p039",
+   "lec03-main-p040"
+  ],
+  "evidence": [
+   "lec03-main-p013",
+   "lec03-main-p039",
+   "lec03-main-p040"
+  ],
+  "characters": 5096
+ },
+ {
+  "method": "Hybrid without the divider-page filter",
+  "question": "q3_properties",
+  "pages": [
+   "lec03-main-p003",
+   "lec02-main-p062",
+   "lec03-main-p013",
+   "lec03-main-p004",
+   "lec03-main-p008",
+   "lec03-main-p048",
+   "lec03-main-p006"
+  ],
+  "found": [
+   "lec03-main-p003",
+   "lec02-main-p062"
+  ],
+  "evidence": [
+   "lec03-main-p003",
+   "lec02-main-p062"
+  ],
+  "characters": 5203
+ },
+ {
+  "method": "Hybrid without the divider-page filter",
+  "question": "q4_rag_vs_ft",
+  "pages": [
+   "lec01-main-p049",
+   "lec01-main-p019",
+   "lec02-main-p047",
+   "lec02-main-p053",
+   "lec02-main-p027",
+   "lec02-main-p046",
+   "lec02-main-p024"
+  ],
+  "found": [
+   "lec02-main-p046",
+   "lec02-main-p047",
+   "lec01-main-p049"
+  ],
+  "evidence": [
+   "lec02-main-p046",
+   "lec02-main-p047",
+   "lec01-main-p049"
+  ],
+  "characters": 7603
+ },
+ {
+  "method": "Hybrid without the divider-page filter",
+  "question": "q5_stop",
+  "pages": [
+   "lec03-main-p043",
+   "lec03-main-p044",
+   "lec03-main-p026",
+   "lec03-main-p020",
+   "lec03-main-p042",
+   "lec03-main-p048",
+   "lec03-main-p025"
+  ],
+  "found": [
+   "lec03-main-p043",
+   "lec03-main-p044"
+  ],
+  "evidence": [
+   "lec03-main-p043",
+   "lec03-main-p044"
+  ],
+  "characters": 5198
+ },
+ {
+  "method": "Hybrid without the divider-page filter",
+  "question": "q6_absent",
+  "pages": [
+   "lec02-main-p013",
+   "lec02-main-p024",
+   "lec01-main-p049",
+   "lec01-main-p019",
+   "lec02-main-p003",
+   "lec02-main-p047",
+   "lec02-main-p027"
+  ],
+  "found": [],
+  "evidence": [],
+  "characters": 7774
+ },
+ {
+  "method": "Hybrid without keeping a page per named lecture",
+  "question": "q1_lora",
+  "pages": [
+   "lec02-main-p052",
+   "lec02-main-p051",
+   "lec02-main-p060",
+   "lec02-main-p061",
+   "lec02-main-p024",
+   "lec02-main-p006",
+   "lec02-main-p023"
+  ],
+  "found": [
+   "lec02-main-p052"
+  ],
+  "evidence": [
+   "lec02-main-p052"
+  ],
+  "characters": 7931
+ },
+ {
+  "method": "Hybrid without keeping a page per named lecture",
+  "question": "q2_memory",
+  "pages": [
+   "lec03-main-p065",
+   "lec03-main-p039",
+   "lec03-main-p038",
+   "lec03-main-p040",
+   "lec03-main-p013",
+   "lec03-main-p041",
+   "lec03-main-p008"
+  ],
+  "found": [
+   "lec03-main-p013",
+   "lec03-main-p039",
+   "lec03-main-p040"
+  ],
+  "evidence": [
+   "lec03-main-p013",
+   "lec03-main-p039",
+   "lec03-main-p040"
+  ],
+  "characters": 5096
+ },
+ {
+  "method": "Hybrid without keeping a page per named lecture",
+  "question": "q3_properties",
+  "pages": [
+   "lec03-main-p003",
+   "lec02-main-p062",
+   "lec03-main-p013",
+   "lec03-main-p004",
+   "lec03-main-p008",
+   "lec03-main-p048",
+   "lec03-main-p006"
+  ],
+  "found": [
+   "lec03-main-p003",
+   "lec02-main-p062"
+  ],
+  "evidence": [
+   "lec03-main-p003",
+   "lec02-main-p062"
+  ],
+  "characters": 5203
+ },
+ {
+  "method": "Hybrid without keeping a page per named lecture",
+  "question": "q4_rag_vs_ft",
+  "pages": [
+   "lec01-main-p049",
+   "lec01-main-p019",
+   "lec02-main-p047",
+   "lec02-main-p053",
+   "lec02-main-p027",
+   "lec02-main-p046",
+   "lec02-main-p024"
+  ],
+  "found": [
+   "lec02-main-p046",
+   "lec02-main-p047",
+   "lec01-main-p049"
+  ],
+  "evidence": [
+   "lec02-main-p046",
+   "lec02-main-p047",
+   "lec01-main-p049"
+  ],
+  "characters": 7603
+ },
+ {
+  "method": "Hybrid without keeping a page per named lecture",
+  "question": "q5_stop",
+  "pages": [
+   "lec03-main-p043",
+   "lec03-main-p044",
+   "lec03-main-p026",
+   "lec03-main-p020",
+   "lec03-main-p048",
+   "lec03-main-p045",
+   "lec03-main-p025"
+  ],
+  "found": [
+   "lec03-main-p043",
+   "lec03-main-p044"
+  ],
+  "evidence": [
+   "lec03-main-p043",
+   "lec03-main-p044"
+  ],
+  "characters": 5626
+ },
+ {
+  "method": "Hybrid without keeping a page per named lecture",
+  "question": "q6_absent",
+  "pages": [
+   "lec02-main-p013",
+   "lec02-main-p024",
+   "lec01-main-p049",
+   "lec01-main-p019",
+   "lec02-main-p003",
+   "lec02-main-p047",
+   "lec02-main-p027"
+  ],
+  "found": [],
+  "evidence": [],
+  "characters": 7774
+ },
+ {
+  "method": "Hybrid without the question-term bonus",
+  "question": "q1_lora",
+  "pages": [
+   "lec02-main-p052",
+   "lec02-main-p051",
+   "lec02-main-p060",
+   "lec02-main-p061",
+   "lec02-main-p024",
+   "lec02-main-p006",
+   "lec02-main-p023"
+  ],
+  "found": [
+   "lec02-main-p052"
+  ],
+  "evidence": [
+   "lec02-main-p052"
+  ],
+  "characters": 7931
+ },
+ {
+  "method": "Hybrid without the question-term bonus",
+  "question": "q2_memory",
+  "pages": [
+   "lec03-main-p065",
+   "lec03-main-p039",
+   "lec03-main-p038",
+   "lec03-main-p040",
+   "lec03-main-p013",
+   "lec03-main-p041",
+   "lec03-main-p008"
+  ],
+  "found": [
+   "lec03-main-p013",
+   "lec03-main-p039",
+   "lec03-main-p040"
+  ],
+  "evidence": [
+   "lec03-main-p013",
+   "lec03-main-p039",
+   "lec03-main-p040"
+  ],
+  "characters": 5096
+ },
+ {
+  "method": "Hybrid without the question-term bonus",
+  "question": "q3_properties",
+  "pages": [
+   "lec03-main-p003",
+   "lec02-main-p062",
+   "lec03-main-p013",
+   "lec03-main-p004",
+   "lec03-main-p008",
+   "lec03-main-p048",
+   "lec03-main-p006"
+  ],
+  "found": [
+   "lec03-main-p003",
+   "lec02-main-p062"
+  ],
+  "evidence": [
+   "lec03-main-p003",
+   "lec02-main-p062"
+  ],
+  "characters": 5203
+ },
+ {
+  "method": "Hybrid without the question-term bonus",
+  "question": "q4_rag_vs_ft",
+  "pages": [
+   "lec01-main-p049",
+   "lec01-main-p019",
+   "lec02-main-p047",
+   "lec02-main-p053",
+   "lec02-main-p027",
+   "lec02-main-p046",
+   "lec02-main-p024"
+  ],
+  "found": [
+   "lec02-main-p046",
+   "lec02-main-p047",
+   "lec01-main-p049"
+  ],
+  "evidence": [
+   "lec02-main-p046",
+   "lec02-main-p047",
+   "lec01-main-p049"
+  ],
+  "characters": 7603
+ },
+ {
+  "method": "Hybrid without the question-term bonus",
+  "question": "q5_stop",
+  "pages": [
+   "lec03-main-p043",
+   "lec03-main-p044",
+   "lec03-main-p026",
+   "lec03-main-p020",
+   "lec03-main-p048",
+   "lec03-main-p045",
+   "lec03-main-p025"
+  ],
+  "found": [
+   "lec03-main-p043",
+   "lec03-main-p044"
+  ],
+  "evidence": [
+   "lec03-main-p043",
+   "lec03-main-p044"
+  ],
+  "characters": 5626
+ },
+ {
+  "method": "Hybrid without the question-term bonus",
+  "question": "q6_absent",
+  "pages": [
+   "lec02-main-p013",
+   "lec02-main-p024",
+   "lec01-main-p049",
+   "lec01-main-p019",
+   "lec02-main-p003",
+   "lec03-main-p064",
+   "lec02-main-p047"
+  ],
+  "found": [],
+  "evidence": [],
+  "characters": 8399
+ },
+ {
+  "method": "Hybrid without the per-section cap",
+  "question": "q1_lora",
+  "pages": [
+   "lec02-main-p052",
+   "lec02-main-p051",
+   "lec02-main-p060",
+   "lec02-main-p061",
+   "lec02-main-p047",
+   "lec02-main-p054",
+   "lec02-main-p024"
+  ],
+  "found": [
+   "lec02-main-p052"
+  ],
+  "evidence": [
+   "lec02-main-p052"
+  ],
+  "characters": 8512
+ },
+ {
+  "method": "Hybrid without the per-section cap",
+  "question": "q2_memory",
+  "pages": [
+   "lec03-main-p065",
+   "lec03-main-p039",
+   "lec03-main-p038",
+   "lec03-main-p040",
+   "lec03-main-p013",
+   "lec03-main-p041",
+   "lec03-main-p008"
+  ],
+  "found": [
+   "lec03-main-p013",
+   "lec03-main-p039",
+   "lec03-main-p040"
+  ],
+  "evidence": [
+   "lec03-main-p013",
+   "lec03-main-p039",
+   "lec03-main-p040"
+  ],
+  "characters": 5096
+ },
+ {
+  "method": "Hybrid without the per-section cap",
+  "question": "q3_properties",
+  "pages": [
+   "lec03-main-p003",
+   "lec02-main-p062",
+   "lec03-main-p013",
+   "lec03-main-p004",
+   "lec03-main-p008",
+   "lec03-main-p048",
+   "lec03-main-p006"
+  ],
+  "found": [
+   "lec03-main-p003",
+   "lec02-main-p062"
+  ],
+  "evidence": [
+   "lec03-main-p003",
+   "lec02-main-p062"
+  ],
+  "characters": 5203
+ },
+ {
+  "method": "Hybrid without the per-section cap",
+  "question": "q4_rag_vs_ft",
+  "pages": [
+   "lec01-main-p049",
+   "lec01-main-p019",
+   "lec02-main-p047",
+   "lec02-main-p053",
+   "lec02-main-p027",
+   "lec02-main-p046",
+   "lec02-main-p024"
+  ],
+  "found": [
+   "lec02-main-p046",
+   "lec02-main-p047",
+   "lec01-main-p049"
+  ],
+  "evidence": [
+   "lec02-main-p046",
+   "lec02-main-p047",
+   "lec01-main-p049"
+  ],
+  "characters": 7603
+ },
+ {
+  "method": "Hybrid without the per-section cap",
+  "question": "q5_stop",
+  "pages": [
+   "lec03-main-p043",
+   "lec03-main-p044",
+   "lec03-main-p026",
+   "lec03-main-p020",
+   "lec03-main-p048",
+   "lec03-main-p045",
+   "lec03-main-p046"
+  ],
+  "found": [
+   "lec03-main-p043",
+   "lec03-main-p044"
+  ],
+  "evidence": [
+   "lec03-main-p043",
+   "lec03-main-p044"
+  ],
+  "characters": 5631
+ },
+ {
+  "method": "Hybrid without the per-section cap",
+  "question": "q6_absent",
+  "pages": [
+   "lec02-main-p013",
+   "lec02-main-p024",
+   "lec01-main-p049",
+   "lec01-main-p019",
+   "lec02-main-p003",
+   "lec02-main-p047",
+   "lec02-main-p027"
+  ],
+  "found": [],
+  "evidence": [],
+  "characters": 7774
+ },
+ {
+  "method": "Vector search, top 7 (same page count as hybrid)",
+  "question": "q1_lora",
+  "pages": [
+   "lec02-main-p052",
+   "lec02-main-p051",
+   "lec02-main-p060",
+   "lec02-main-p061",
+   "lec02-main-p047",
+   "lec02-main-p024",
+   "lec02-main-p006"
+  ],
+  "found": [
+   "lec02-main-p052"
+  ],
+  "evidence": [
+   "lec02-main-p052"
+  ],
+  "characters": 8005
+ },
+ {
+  "method": "Vector search, top 7 (same page count as hybrid)",
+  "question": "q2_memory",
+  "pages": [
+   "lec03-main-p065",
+   "lec03-main-p039",
+   "lec03-main-p038",
+   "lec03-main-p040",
+   "lec03-main-p013",
+   "lec03-main-p041",
+   "lec03-main-p037"
+  ],
+  "found": [
+   "lec03-main-p013",
+   "lec03-main-p039",
+   "lec03-main-p040"
+  ],
+  "evidence": [
+   "lec03-main-p013",
+   "lec03-main-p039",
+   "lec03-main-p040"
+  ],
+  "characters": 4763
+ },
+ {
+  "method": "Vector search, top 7 (same page count as hybrid)",
+  "question": "q3_properties",
+  "pages": [
+   "lec03-main-p003",
+   "lec02-main-p062",
+   "lec03-main-p013",
+   "lec03-main-p004",
+   "lec03-main-p008",
+   "lec03-main-p048",
+   "lec03-main-p006"
+  ],
+  "found": [
+   "lec03-main-p003",
+   "lec02-main-p062"
+  ],
+  "evidence": [
+   "lec03-main-p003",
+   "lec02-main-p062"
+  ],
+  "characters": 5203
+ },
+ {
+  "method": "Vector search, top 7 (same page count as hybrid)",
+  "question": "q4_rag_vs_ft",
+  "pages": [
+   "lec01-main-p049",
+   "lec01-main-p019",
+   "lec02-main-p047",
+   "lec02-main-p053",
+   "lec02-main-p027",
+   "lec02-main-p046",
+   "lec02-main-p024"
+  ],
+  "found": [
+   "lec02-main-p046",
+   "lec02-main-p047",
+   "lec01-main-p049"
+  ],
+  "evidence": [
+   "lec02-main-p046",
+   "lec02-main-p047",
+   "lec01-main-p049"
+  ],
+  "characters": 7603
+ },
+ {
+  "method": "Vector search, top 7 (same page count as hybrid)",
+  "question": "q5_stop",
+  "pages": [
+   "lec03-main-p043",
+   "lec03-main-p044",
+   "lec03-main-p026",
+   "lec03-main-p020",
+   "lec03-main-p042",
+   "lec03-main-p048",
+   "lec03-main-p045"
+  ],
+  "found": [
+   "lec03-main-p043",
+   "lec03-main-p044"
+  ],
+  "evidence": [
+   "lec03-main-p043",
+   "lec03-main-p044"
+  ],
+  "characters": 4767
+ },
+ {
+  "method": "Vector search, top 7 (same page count as hybrid)",
+  "question": "q6_absent",
+  "pages": [
+   "lec02-main-p013",
+   "lec02-main-p024",
+   "lec01-main-p049",
+   "lec01-main-p019",
+   "lec02-main-p003",
+   "lec03-main-p064",
+   "lec02-main-p047"
+  ],
+  "found": [],
+  "evidence": [],
+  "characters": 8399
+ }
+]

@@ -1,0 +1,64 @@
+$ uv run python -m app.agent --trace --tree "In the Lecture 03 examples, how does compaction differ from memory across sessions? Do all daily notes go into long-term memory?"
+
+[model] gemini-3.5-flash-lite
+To help you explore how memory and compaction work in Lecture 03:
+
+1. **Compaction vs. Memory Across Sessions:** 
+   * Look at how **compaction** operates *within* a single session (what happens to old history when the context fills up?). 
+   * In contrast, look at how **external storage** or tools work *across* sessions to persist information beyond a single conversation.
+
+2. **Daily Notes and Long-Term Memory:**
+   * Examine the OpenClaw example where daily notes (e.g., `memory/<date>.md`) are processed overnight. 
+   * Check whether the nightly review process moves *all* content from the daily notes into `MEMORY.md`, or if it uses a selective threshold (and what happens to one-off lookups).
+
+Review Lecture 3, pages 39 and 40 (Lecture 3 · translated PDF pp. 39–40) to compare these mechanisms in detail!
+
+--- trace ---
+[tool call]   browse_tree({})
+[open table of contents] AIE2026 course materials
+  Direct children (first sentence only for pages):
+    - lec01-main · Introduction to AI Engineering and AI-Assisted Coding
+    - lec02-main · Fundamentals of Foundation Models
+    - lec03-main · AI Agents
+[tool call]   browse_tree({'node_id': 'lec03-main'})
+[open table of contents] AIE2026 course materials → AI Agents
+  Direct children (first sentence only for pages):
+    - lec03-main-p001 · Lecture 3 · translated PDF p.1 · AI Agents
+      AI Engineering Practical Course 2026
+    - lec03-main-p002 · Lecture 3 · translated PDF p.2 · About me
+      About me
+    - lec03-main-p003 · Lecture 3 · translated PDF p.3 · From Lecture 2: Model Properties Underlying Today’s Design
+      From Lecture 2: Model Properties Underlying Today’s Design
+    - lec03-main-p004 · Lecture 3 · translated PDF p.4 · Agenda
+      Agenda
+    - lec03-main-s005 · Part 2 Building an agent
+    - lec03-main-s018 · Part 3 Loop
+    - lec03-main-s022 · Part 4 Tools
+    - lec03-main-s033 · Part 5 Structured output and tool calls
+    - lec03-main-s037 · Part 6 Memory
+    - lec03-main-s042 · Part 7 Stop Conditions and Failure Behavior
+    - lec03-main-s049 · Part 9 Trust Boundaries and the Harness
+    - lec03-main-s054 · Part 10 RSI and Agents
+    - lec03-main-s060 · Appendix
+[tool call]   browse_tree({'node_id': 'lec03-main-s037'})
+[open table of contents] AIE2026 course materials → AI Agents → Part 6 Memory
+  Direct children (first sentence only for pages):
+    - lec03-main-p037 · Lecture 3 · translated PDF p.37 · Part 6 Memory
+      Part 6
+    - lec03-main-p038 · Lecture 3 · translated PDF p.38 · Without memory, every session starts from scratch
+      Without memory, every session starts from scratch
+    - lec03-main-p039 · Lecture 3 · translated PDF p.39 · Example: Claude
+      Example: Claude
+    - lec03-main-p040 · Lecture 3 · translated PDF p.40 · Example: OpenClaw
+      Example: OpenClaw
+    - lec03-main-p041 · Lecture 3 · translated PDF p.41 · Skill: save the procedure for a repeated task as files
+      Skill: save the procedure for a repeated task as files
+[tool call]   browse_tree({'node_id': 'lec03-main-p039'})
+[open table of contents] AIE2026 course materials → AI Agents → Part 6 Memory → Example: Claude
+    (Leaf page: retrieved 846 characters of text)
+[tool call]   browse_tree({'node_id': 'lec03-main-p040'})
+[open table of contents] AIE2026 course materials → AI Agents → Part 6 Memory → Example: OpenClaw
+    (Leaf page: retrieved 667 characters of text)
+[time] Answer completed in 98.20 seconds (including retrieval and embedding)
+[usage] Input 8,278 tokens / Output 319 tokens / Model responses 6
+[cost] Estimated generation API cost: $0.003281 USD (excludes embedding and index construction)

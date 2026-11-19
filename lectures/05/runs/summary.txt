@@ -1,0 +1,25 @@
+q1_full             | 
+q1_graph           44.88 seconds | Input 5,188 tokens / Output 250 tokens / Model responses 2
+q1_hybrid           | 
+q1_neighbors        | 
+q1_top10           39.99 seconds | Input 4,649 tokens / Output 146 tokens / Model responses 2
+q1_tree            188.93 seconds | Input 9,442 tokens / Output 384 tokens / Model responses 5
+q1_vector          36.05 seconds | Input 2,758 tokens / Output 189 tokens / Model responses 2
+q2_full            24.18 seconds | Input 95,828 tokens / Output 254 tokens / Model responses 1
+q2_graph           76.03 seconds | Input 4,876 tokens / Output 266 tokens / Model responses 2
+q2_hybrid          20.70 seconds | Input 3,471 tokens / Output 260 tokens / Model responses 2
+q2_neighbors       32.69 seconds | Input 4,464 tokens / Output 248 tokens / Model responses 2
+q2_top10           51.33 seconds | Input 4,000 tokens / Output 296 tokens / Model responses 2
+q2_tree            98.20 seconds | Input 8,278 tokens / Output 319 tokens / Model responses 6
+q2_vector          97.47 seconds | Input 2,293 tokens / Output 281 tokens / Model responses 2
+q3_graph            | 
+q3_hybrid           | 
+q3_vector          16.63 seconds | Input 2,191 tokens / Output 472 tokens / Model responses 2
+q4_graph            | 
+q4_hybrid           | 
+q4_vector          44.08 seconds | Input 2,599 tokens / Output 364 tokens / Model responses 2
+q5_hybrid          19.48 seconds | Input 3,488 tokens / Output 341 tokens / Model responses 2
+q5_neighbors       42.41 seconds | Input 4,142 tokens / Output 304 tokens / Model responses 2
+q5_vector          27.93 seconds | Input 2,127 tokens / Output 411 tokens / Model responses 2
+q6_hybrid          20.03 seconds | Input 3,964 tokens / Output 112 tokens / Model responses 2
+q6_vector          38.01 seconds | Input 2,710 tokens / Output 186 tokens / Model responses 2

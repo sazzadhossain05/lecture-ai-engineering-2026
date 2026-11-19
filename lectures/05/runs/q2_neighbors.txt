@@ -1,0 +1,18 @@
+$ uv run python -m app.agent --trace --neighbors "In the Lecture 03 examples, how does compaction differ from memory across sessions? Do all daily notes go into long-term memory?"
+
+[model] gemini-3.5-flash-lite
+[search] RAG_TOP_K=5
+To help you think about how memory and compaction work, consider these pointers based on Lecture 3 (specifically pages 39 and 40):
+
+* **Where they operate:** Look at the distinction between what happens *inside* the active context (within a single session) versus *external storage* (across sessions). What role does compaction play regarding old conversation history, and how do memory tools interact with persistent storage? (Lecture 3, p. 39)
+* **Daily notes vs. long-term memory:** In the OpenClaw example, the agent records events into daily notes (`memory/<date>.md`). Does every piece of information from those daily notes get transferred directly into `MEMORY.md` (long-term memory)? Review the nightly "Review (dreaming)" steps—such as dropping duplicates and filtering through a threshold—to see how information is selected or discarded. (Lecture 3, p. 40)
+
+Try comparing the scope of compaction versus external memory tools, and check what criteria are applied during the nightly review process!
+
+--- trace ---
+[tool call]   search_materials_with_neighbors({'query': 'compaction memory across sessions daily notes long-term memory'})
+[tool return] search_materials_with_neighbors -> {"results": [{"page_id": "lec03-main-p064", "document_id": "lec03-main", "lecture": 3, "document_title": "AI Agents", "s…
+  Pages returned: results: lec03-main-p064 (neighbor of lec03-main-p065), lec03-main-p065, lec03-main-p066 (neighbor of lec03-main-p065), lec03-main-p039, lec03-main-p037 (neighbor of lec03-main-p038), lec03-main-p038, lec03-main-p040, lec03-main-p041 (neighbor of lec03-main-p040), lec03-main-p012 (neighbor of lec03-main-p013), lec03-main-p013, lec03-main-p014 (neighbor of lec03-main-p013)
+[time] Answer completed in 32.69 seconds (including retrieval and embedding)
+[usage] Input 4,464 tokens / Output 248 tokens / Model responses 2
+[cost] Estimated generation API cost: $0.001959 USD (excludes embedding and index construction)

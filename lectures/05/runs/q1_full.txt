@@ -1,0 +1,5 @@
+$ uv run python -m app.agent --trace --full-context "In Lecture 02, what does LoRA freeze and what does it train? What does QLoRA add?"
+
+[model] gemini-3.5-flash-lite
+[full-context] Input: 369,491 characters
+[full-context] API error HTTP 503: {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}

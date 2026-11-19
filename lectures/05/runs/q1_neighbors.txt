@@ -1,0 +1,5 @@
+$ uv run python -m app.agent --trace --neighbors "In Lecture 02, what does LoRA freeze and what does it train? What does QLoRA add?"
+
+[model] gemini-3.5-flash-lite
+[search] RAG_TOP_K=5
+The model is busy (503). Wait a little and try again.

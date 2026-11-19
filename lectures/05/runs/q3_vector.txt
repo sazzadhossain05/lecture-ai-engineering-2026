@@ -1,0 +1,33 @@
+$ uv run python -m app.agent --trace  "Which model properties from Lecture 02 become design assumptions for agents in Lecture 03, and which part of the agent design handles each one?"
+
+[model] gemini-3.5-flash-lite
+[search] RAG_TOP_K=5
+To answer your question, let's look at how the model properties from Lecture 02 map directly to the agent design components in Lecture 03. 
+
+Slide 3 of Lecture 03 ("From Lecture 2: Model Properties Underlying Today’s Design") outlines this mapping (Lecture 3, p. 3):
+
+1. **Same question, different answer each time**
+   * **Agent Design Part:** Part 3 (Loop) — handles the fact that the same request can lead to different steps each time and errors can pile up.
+2. **Answers plausibly even when it doesn't know**
+   * **Agent Design Part:** Part 8 (Failure) — addresses issues like calling nonexistent functions or misreading tool results.
+3. **Knowledge has a cutoff**
+   * **Agent Design Part:** Part 4 (Tools) — enables fetching new information using tools.
+4. **Can't treat long context evenly**
+   * **Agent Design Part:** Part 6 (Memory) — addresses how earlier instructions and history can get missed in long tasks.
+5. **Can't tell text in the input from instructions**
+   * **Agent Design Part:** Parts 4 & 9 (Trust boundaries) — deals with instructions inside pages or files triggering unintended tool use.
+6. **Tells you what you want to hear (sycophancy)**
+   * **Agent Design Part:** Parts 7 & 8 (Stopping & failure) — handles situations where the model might report "Done!" even when it didn't actually work.
+* *(Plus)* **Can generate outputs in a fixed format**
+  * **Agent Design Part:** Part 5 (Structured output) — enables reliably emitting tool calls in a fixed format.
+
+**How to think about this:**
+When designing an agent, you can't assume the underlying foundation model is infallible, deterministic, or immune to prompt injection. Instead, you build specific wrapper mechanisms—such as loops, memory management, strict trust boundaries, and external stopping conditions—into the agent's harness to safely handle these inherent model limitations!
+
+--- trace ---
+[tool call]   search_materials({'query': 'model properties design assumptions agents Lecture 02 Lecture 03'})
+[tool return] search_materials -> {"results": [{"page_id": "lec03-main-p003", "document_id": "lec03-main", "lecture": 3, "document_title": "AI Agents", "s…
+  Pages returned: results: lec03-main-p003, lec02-main-p062, lec02-main-p029, lec03-main-p004, lec03-main-p005
+[time] Answer completed in 16.63 seconds (including retrieval and embedding)
+[usage] Input 2,191 tokens / Output 472 tokens / Model responses 2
+[cost] Estimated generation API cost: $0.001837 USD (excludes embedding and index construction)
