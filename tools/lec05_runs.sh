@@ -2,7 +2,7 @@
 # Lecture 05: run every comparison for the exercise and the homework, save the outputs, then commit and push.
 #
 # Usage (from the repository root, on the lec05 branch):  bash tools/lec05_runs.sh
-# Takes about 20 to 30 minutes. Safe to run again: finished runs are skipped, failed ones are retried.
+# Takes about 20 to 40 minutes. Safe to run again: finished runs are skipped, failed ones are retried.
 # Each output goes to lectures/05/runs/<name>.txt and starts with the exact command that produced it.
 set -u
 cd "$(git rev-parse --show-toplevel)"
@@ -28,7 +28,7 @@ run() {
   if [ -s "$file" ] && grep -q '^\[cost\]' "$file"; then echo "skip  $name (already done)"; return 0; fi
   q=$(question "$qid")
   [ "$topk" = "-" ] || env_setting="AIE_RAG_TOP_K=$topk"
-  for attempt in 1 2 3 4; do
+  for attempt in 1 2 3 4 5 6; do
     echo "run   $name (attempt $attempt)"
     {
       echo "\$ ${env_setting:+$env_setting }uv run python -m app.agent --trace $* \"$q\""
@@ -41,9 +41,9 @@ run() {
       return 0
     fi
     echo "      not finished: $(grep -iE 'rate limit|busy|error|exceeded' "$file" | head -1 | cut -c1-120)"
-    sleep 60
+    sleep 90
   done
-  echo "      gave up on $name after 4 attempts; the last output is kept in $file"
+  echo "      gave up on $name after 6 attempts; the last output is kept in $file"
 }
 
 echo "== STEP 2: search results alone"
@@ -90,19 +90,33 @@ run q4_hybrid     q4_rag_vs_ft  - --hybrid
 run q5_hybrid     q5_stop       - --hybrid
 run q6_hybrid     q6_absent     - --hybrid
 
+echo "== Advanced, target questions: each one spans two lectures that the question names"
+TARGETS=data/eval/lec05_target_questions.jsonl
+uv run python tools/rag_eval.py --questions "$TARGETS" --embeddings "$OUT/target_query_embeddings.json" \
+  --out "$OUT/target_eval.md" > "$OUT/target_eval_console.txt" 2>&1 || echo "      target comparison failed; see $OUT/target_eval_console.txt"
+QUESTIONS=$TARGETS
+run t1_vector     t1_rsi      -
+run t1_hybrid     t1_rsi      - --hybrid
+run t2_vector     t2_errors   -
+run t2_hybrid     t2_errors   - --hybrid
+run t3_vector     t3_schedule -
+run t3_hybrid     t3_schedule - --hybrid
+QUESTIONS=data/eval/lec05_questions.jsonl
+
 echo "== Summary"
-for f in "$OUT"/q*.txt; do
+for f in "$OUT"/q*.txt "$OUT"/t*_*.txt; do
+  case "$f" in *_eval*|*target_*) continue ;; esac
   printf '%-18s %s | %s\n' "$(basename "$f" .txt)" \
     "$(grep -m1 '^\[time\]' "$f" | sed 's/\[time\] Answer completed in //; s/ (including.*//')" \
     "$(grep -m1 '^\[usage\]' "$f" | sed 's/\[usage\] //')"
 done | tee "$OUT/summary.txt"
 
-missing=$(for f in "$OUT"/q*.txt; do grep -q '^\[cost\]' "$f" || basename "$f"; done)
+missing=$(for f in "$OUT"/q*.txt "$OUT"/t[0-9]_*.txt; do grep -q '^\[cost\]' "$f" || basename "$f"; done)
 if [ -n "$missing" ]; then
   echo "Some runs did not finish: $missing"
   echo "Wait a few minutes and run this script again; finished runs are skipped."
 fi
 
-git add "$OUT" "$QUESTIONS"
+git add "$OUT" data/eval/lec05_questions.jsonl data/eval/lec05_target_questions.jsonl tools/lec05_runs.sh
 git commit -q -m "Lecture 05: comparison runs for the exercise and homework" && echo "Committed the results."
 git push -u origin lec05 && echo "Pushed to your fork (branch lec05)."
